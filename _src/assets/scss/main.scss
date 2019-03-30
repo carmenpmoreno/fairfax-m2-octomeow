@@ -1,11 +1,9 @@
-
+// CORE
+@import 'core/variables';
 @import 'core/settings';
 @import 'core/utilities';
 @import 'core/base';
-
-@import 'layout/content-landing';
-// CORE
-@import 'core/variables';
-
 // COMPONENTS
 @import 'components/typography';
+
+@import 'layout/content-landing';
