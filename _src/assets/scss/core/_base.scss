@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.4;
+    font-size: 13px;
+    color: #54585a;
+    background: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+}
+
+.main-container {
+    max-width: 80%;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+@media all and (min-width: 768px) {
+    .main-container {
+        max-width: 1000px;
+    }
+}
