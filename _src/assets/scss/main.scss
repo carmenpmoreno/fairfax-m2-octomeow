@@ -1,6 +1,8 @@
-@import 'core/settings';
+
+// CORE
+@import 'core/variables';
+
+// COMPONENTS
+@import 'components/typography';
 @import 'components/form-header';
-body {
-	background: url('../images/logo-adalab-80px.png') center center no-repeat $color-white;
-	height: 100vh;
-}
+
