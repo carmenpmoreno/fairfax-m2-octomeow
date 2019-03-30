@@ -23,8 +23,8 @@ body {
     min-height: 100vh;
     line-height: 1.4;
     font-size: 13px;
-    color: #54585a;
-    background: #fff;
+    color: $color-greyMouse;
+    background: $color-whiteSnow;
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
 }
@@ -32,10 +32,22 @@ body {
 .main-container {
     max-width: 80%;
     margin: 0 auto;
+}
+
+.central {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     min-height: 100vh;
 }
 
 @media all and (min-width: 768px) {
+    .main-container {
+        max-width: 760px;
+    }
+}
+
+@media all and (min-width: 1200px) {
     .main-container {
         max-width: 1000px;
     }
