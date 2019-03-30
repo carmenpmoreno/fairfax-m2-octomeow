@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Awesome Profile Cards</title>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="icon" href="favicon.png"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="icon" href="favicon.png" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body>
 
+<body class="gradient-landing">
+	<div class="main-container flex-center flex-direction align-text">
+		<header class="header-landing">
+			<partial src="_landing-header.html"></partial>
+		</header>
+		<main class="main-landing">
+			<partial src="_landing-main.html"></partial>
+		</main>
+		<footer class="footer">
+			<ul>
+				<li class="footer-text">Awesome profile-cards @2018</li>
+				<li class="footer-logo"></li>
+			</ul>
+		</footer>
+	</div>
 </body>
+
 </html>
