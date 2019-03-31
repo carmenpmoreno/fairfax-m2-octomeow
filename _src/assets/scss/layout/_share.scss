@@ -1,3 +1,8 @@
+.share {
+    display: flex;
+    flex-direction: column;
+}
+
 .legend__container {
     width: 100%;
     @include legendDistribution;
@@ -12,8 +17,24 @@
     color: $color-greyMouse;
     width: 16px;
     height: 18px;
-    align-self: flex-end;
-    
+    transform: rotate(180deg);
+    align-self: flex-end;   
 }
 
+.share-button {
+    height: 50px;
+    width: 199px;
+    background-color: $color-orangeButane;
+    color: $color-whiteSnow;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 12px;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+   
+
+}
 
