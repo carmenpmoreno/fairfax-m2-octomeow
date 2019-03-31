@@ -1,0 +1,68 @@
+.color__container {
+    width: 90px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+
+    .color-item {
+        width: 30px;
+        height: 100%;
+    }
+
+    .green--1 {
+        background-color: #114e4e;
+    }
+    
+    .green--2 {
+        background-color: #438792;
+    }
+
+    .green--3 {
+        background-color: #a2deaf;
+    }
+
+    .red--1 {
+        background-color: #420101;
+    }
+    
+    .red--2 {
+        background-color: #bd1010;
+    }
+
+    .red--3 {
+        background-color: #e95626;
+    }
+
+    .grey--1 {
+        background-color: #3e5b65;
+    }
+
+    .grey--2 {
+        background-color: #dfe5eb;
+    }
+
+    .grey--3 {
+        background-color: #a0c0cf;
+    }
+}
+
+.option__distribution {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .option__container {
+        width: 120px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;  
+
+        .radio__container {
+            width: 30px;
+            margin: 0 auto;
+        }
+    }
+    
+}
