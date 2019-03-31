@@ -1,8 +1,33 @@
-.img-profile__preview {
-    height: 30px;
-    width: 30px;
-    border: solid 1px #a2deaf;
+.fill-in__item {
+
+    display: flex;
+    flex-direction: column;
+
+    .fill-in__input {
+        border: solid 1px $color-greenHospital;
+        width: 281px;
+        height: 30px;
+        margin-top: 6px;
+        margin-bottom: 20px;
+    }
+
+    .fill-in__buttonImg-wrapper {
+        display: flex;
+        flex-direction: row;
+    
+        .fill-in__button {
+            height: 30px;
+            width: 140px;
+        }
+    
+        .img-profile__preview {
+            height: 30px;
+            width: 30px;
+            border: solid 1px $color-greenHospital;
+            margin-top: 6px;
+            margin-left: 20px;
+        }   
+    }
 }
-* {
-    background-color: blue;
-}
+
+
