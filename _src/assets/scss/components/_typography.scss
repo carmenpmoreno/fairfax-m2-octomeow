@@ -29,8 +29,16 @@
 
 .title__legend--grey {
     font-family: $font-collapsibleLegend;
+    font-size: 18px;
     font-weight: 400;
     color: $color-greyMouse;
     text-transform: uppercase;
+}
 
+.subtitle__legend--grey {
+    font-family: $font-collapsibleLegend;
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-greyMouse;
+    text-transform: uppercase;
 }
