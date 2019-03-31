@@ -1,0 +1,13 @@
+@mixin legendDistribution {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+@mixin formIcon {
+    color: $color-orangeButane;
+    width: 16px;
+    height: 18px;
+}

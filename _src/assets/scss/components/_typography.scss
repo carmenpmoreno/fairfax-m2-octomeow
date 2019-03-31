@@ -1,0 +1,37 @@
+
+// LANDING PAGE
+.title--bold__orange{
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size: 20px;
+    color:$color-orangeButane;
+}
+
+.title--legend__blue{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color:$color-blueCoal; 
+}
+
+.icon--legend{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color:$color-greyMouse; 
+}
+
+.copyright{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color:$color-greyLight; 
+}
+
+//FORM
+
+.title__legend--grey {
+    font-family: $font-collapsibleLegend;
+    font-size: 18px;
+    font-weight: 400;
+    color: $color-greyMouse;
+    text-transform: uppercase;
+
+}

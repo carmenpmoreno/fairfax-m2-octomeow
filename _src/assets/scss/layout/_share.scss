@@ -1,0 +1,19 @@
+.legend__container {
+    width: 100%;
+    @include legendDistribution;
+}
+
+.legend__icon--share {
+    @include formIcon;
+    margin-right: 12px;
+}
+
+.form__arrow {
+    color: $color-greyMouse;
+    width: 16px;
+    height: 18px;
+    align-self: flex-end;
+    
+}
+
+

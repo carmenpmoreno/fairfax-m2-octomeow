@@ -1,2 +1,18 @@
 
+// CORE
+@import 'core/variables';
+@import 'core/base';
+@import 'core/mixins';
 
+
+// COMPONENTS
+@import 'components/typography';
+@import 'components/form-header';
+
+//LAYOUT
+@import 'layout/form';
+@import 'layout/design';
+@import 'layout/share';
+
+//LAYOUTS
+@import 'layouts/header';
