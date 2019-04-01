@@ -18,7 +18,7 @@ fieldset {
 
         .legend__icon {
             padding: 13px 0;
-            flex-basis: 54px;
+            flex-basis: 31px;
             color: $color-orangeButane;
         }
 
@@ -28,9 +28,8 @@ fieldset {
         }
 
         .legend__arrow {
-            flex-basis: 54px;
-            padding: 13px 0;                
-            color: $color-greyMouse;
+            flex-basis: 77px;
+            padding: 13px 0;                color: $color-greyMouse;
             transform: rotate(180deg);
             display: flex;
             justify-content: flex-start;

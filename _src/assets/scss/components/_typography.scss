@@ -41,4 +41,12 @@
     font-weight: 400;
     color: $color-greyMouse;
     text-transform: uppercase;
+.fill-in__label {
+    font-family: $font-collapsibleLegend;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-blueCoal;
+}
+.fill-in__buttonLabel {
+    color: $color-whiteSnow;
 }
