@@ -32,6 +32,9 @@
     border-radius: 12px;
     margin:30px auto;
     text-align: center;
+    &:active {
+        background-color: $color-greyBorderline;   
+    }
 }
 
 .section__twitter {
@@ -52,9 +55,12 @@
 }
 
 .twitter-link {
+    width: 280px;
     color: $color-orangeButane;
     font-size: 12px;
     text-align: left;
+    display: flex;
+    overflow: hidden;
 }
 
 .button-twitter {
