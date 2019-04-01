@@ -8,10 +8,17 @@
 @import 'components/typography';
 @import 'components/form-header';
 
-//LAYOUT
-@import 'layout/form';
-@import 'layout/design';
-
-
 //LAYOUTS
 @import 'layouts/header';
+@import 'core/utilities';
+@import 'core/base';
+
+// COMPONENTS
+@import 'components/typography';
+
+//LAYOUTS
+@import 'layout/form';
+@import 'layout/design';
+@import 'layout/header-landing';
+@import 'layout/content-landing';
+@import 'layout/footer';
