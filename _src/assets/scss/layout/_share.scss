@@ -1,0 +1,82 @@
+.share {
+    display: flex;
+    flex-direction: column;
+}
+
+.legend__container {
+    width: 100%;
+    @include legendDistribution;
+}
+
+.legend__icon--share {
+    @include formIcon;
+    margin-right: 12px;
+}
+
+.form__arrow {
+    color: $color-greyMouse;
+    width: 16px;
+    height: 18px;
+    transform: rotate(180deg);
+    align-self: flex-end;   
+}
+
+.share-button {
+    height: 50px;
+    width: 199px;
+    background-color: $color-orangeButane;
+    color: $color-whiteSnow;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 12px;
+    margin:30px auto;
+    text-align: center;
+    &:active {
+        background-color: $color-greyBorderline;   
+    }
+}
+
+.section__twitter {
+    width: 280px;
+    text-align: center;
+    padding: 20px 20px 30px 20px;
+    margin: auto;
+    border-top: 1px solid $color-greyBorderline;
+    border-bottom: 1px solid $color-greyBorderline;
+}
+
+.title-twitter {
+    font-family: $font-collapsibleLegend;
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-greyMouse;
+    margin-bottom: 5px;
+}
+
+.twitter-link {
+    width: 280px;
+    color: $color-orangeButane;
+    font-size: 12px;
+    text-align: left;
+    display: flex;
+    overflow: hidden;
+}
+
+.button-twitter {
+    width: 181px;
+    height: 30px;
+    background-color: $color-blueTwitter;
+    color: $color-whiteSnow;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    font-family: $font-collapsibleLegend;
+    border: none;
+    border-radius: 3px;
+}
+
+.twitter-icon {
+    width: 18px;
+    height: 18px;
+}
