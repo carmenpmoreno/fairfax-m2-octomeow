@@ -2,6 +2,7 @@
 // CORE
 @import 'core/variables';
 @import 'core/base';
+@import 'core/utilities';
 @import 'core/mixins';
 
 
@@ -14,6 +15,14 @@
 @import 'layout/design';
 @import 'layout/share';
 @import 'layout/preview';
+@import 'layout/fill-in';
+
+
 
 //LAYOUTS
+@import 'layout/form';
+@import 'layout/design';
+@import 'layout/header-landing';
+@import 'layout/content-landing';
+@import 'layout/footer';
 @import 'layouts/header';
