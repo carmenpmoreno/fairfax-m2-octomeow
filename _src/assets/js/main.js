@@ -4,18 +4,21 @@ console.log('>> Ready :)');
 
 //Collapsible
 
-let coll = document.getElementsByClassName("collapsible");
+const collapsibles = document.getElementsByClassName("collapsible");
 
-for (let i = 0; i < coll.length; i++) {
+for (let i = 0; i < collapsibles.length; i++) {
 
-  coll[i].addEventListener("click", function() {
-    let content = this.nextElementSibling;
-    
+  collapsibles[i].addEventListener("click", function() {
+    const content = this.nextElementSibling;
+    const arrow = this.getElementsByClassName('legend__arrow')[0];
+
     if (content.style.display === "flex") {
       content.style.display = "none";
+      arrow.classList.remove('fa-chevron-up');
     } else {
       content.style.display = "flex";
       arrow.classList.add('fa-chevron-up');
     }
-  });
+  });   
 }
+
