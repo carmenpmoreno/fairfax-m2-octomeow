@@ -1,7 +1,51 @@
 .form {
-    padding: 17px 20px 30px;
     background-image: linear-gradient(to bottom, #f5f5f5, #f7f7f7, #fafafa, #fcfcfc, #ffffff);
     min-width: 320px;
+
+    .collapsible__container {
+        padding: 14px 20px 30px 20px;
+    }
+
+     //BORRAR ESTOS ESTILOS, ERAN SOLO PARA MAQUETAR
+    .preview {
+        min-height: 300px;
+        background-color: blue;
+        width: 100%;
+    }
+
+    @media all and (min-width: 768px) {
+        display: flex;
+        flex-direction: row-reverse;
+
+        .preview {
+            flex-basis: 50%;
+            background-color: blue;
+            margin: 23px 40px 21px 0;
+        }
+
+        .collapsible__container {
+            padding: 17px 30px 0 40px;
+            flex-basis: 50%;
+            max-width: 379px;
+
+        }
+    }
+
+    @media all and (min-width: 1024px) {
+        display: flex;
+        flex-direction: row-reverse;
+
+        .preview {
+            flex-grow: 1;
+            background-color: blue;
+            margin-left: 20px;
+        }
+
+        .collapsible__container {
+            flex-basis: 329px;
+            margin-right: 10px;
+        }
+    }
 }
 
 .design, .fill-in, .share {
