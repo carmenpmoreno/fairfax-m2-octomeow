@@ -1,10 +1,14 @@
+.fill-in__items {
+    border-bottom: 1px solid $color-greyBorderline;
+    margin-bottom: 10px;
+}
 .fill-in__item {
     display: flex;
     flex-direction: column;
 
     .fill-in__input {
         border: solid 1px $color-greenHospital;
-        width: 281px;
+        min-width: 281px;
         height: 30px;
         margin-top: 6px;
         margin-bottom: 20px;
