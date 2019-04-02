@@ -26,3 +26,42 @@
         padding: 7px 9px;
     }
 }
+
+.card-preview {
+    width: 240px;
+    height: 329px;
+}
+
+.card--header {
+    height: 75px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    background-color: $color-whiteSnow;
+}
+
+.sidebar {
+    height: 42px;
+    width: 5px;
+    background-color: $color-greenHospital;
+}
+
+.main--data {
+    width: 100%;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-cardName;
+
+    .full-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-blueCoal;
+    }
+
+    .occupation {
+        font-size: 16px;
+        color: $color-blueSky;
+    }
+}
