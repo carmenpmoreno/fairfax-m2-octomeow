@@ -1,0 +1,28 @@
+.contact__link {
+    background: $color-whiteSnow;
+}
+
+.contact__list {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+
+    &--icon {
+        font-size: 18px;
+    }
+}
+
+.contact__list--rrss {
+    display: flex;
+    border: solid $color-greenHospital 1px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+    a {
+        color: $color-blueCoal;
+        text-decoration: none;
+        padding: 7px 9px;
+    }
+}
