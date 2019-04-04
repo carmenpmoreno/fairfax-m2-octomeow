@@ -12,4 +12,4 @@ function insertEmailOnPreview () {
 
 // listener
 emailInput.addEventListener('keyup', insertEmailOnPreview);
-emailInput.addEventListener('mouseover', insertEmailOnPreview);
+;
