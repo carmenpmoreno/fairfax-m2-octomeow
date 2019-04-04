@@ -1,55 +1,60 @@
 
 'use strict';
 
+
 console.log('>> Ready :)');
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-const inputEl = document.querySelector('.fill-in__input');
-const inputDefaultText = "Nombre de prueba";
-const nameCardEl = document.querySelector('.full-name');
+// change button submit color
 
-function writeCard () {
-    console.log('Listener is working');
-    const inputText = inputEl.value || inputDefaultText;
-    nameCardEl.innerHTML =  inputText;
+const formButton = document.querySelector('.share-button');
+const previewIcon= document.querySelector('.contact__list--rrss');
+const emptyInput= document.querySelector('.fill-in__input');
+
+function changeButtonColor(event){
+    event.preventDefault();
+
+    formButton.classList.add('share-button-pushed');
+    
+    //if (emptyInput.value === ''){
+       // previewIcon.classList.add('contact__list--rrss-default');}
+    
+}
+// añadir cambio de color en los iconos cuando su input está vacia
+
+formButton.addEventListener('click', changeButtonColor);
+
+
+
+
+/*const nameCard= document.querySelector('.full-name');
+const inputName= document.querySelector('.fill-in__input');
+const defaultText= "Nombre de prueba";
+function writeName(){
+    console.log('hola');
+    if (!inputName.value){
+        nameCard.innerHTML= defaultText;
+    }
+    else{
+        nameCard.innerHTML=inputName.value;
+    }
+    
+  //nameCard.innerHTML= inputName.value || defaultText;
+} 
+
+inputName.addEventListener('keyup', writeName);*/
+
+//LINKEDIN
+
+const linkedinPreview= document.querySelector('.link__linkedin');
+const linkedinInput= document.getElementById('linkedin');
+const linkedinDefaultText='https://www.linkedin.com';
+
+function writeLinkedin(){
+    console.log('works');
+    linkedinPreview.href= linkedinInput.value || linkedinDefaultText;
 };
 
-// function writeCard () {
-//     console.log('Listener is working');
-//     if (inputEl.value) {
-//     let inputText = event.currentTarget.value;
-//     nameCardEl.innerHTML =  inputText;
-//     } else {
-//     let inputText =  inputDefaultText;
-//     nameCardEl.innerHTML =  inputText;
-//     };
-// };
-
-// function writeCard () {
-//     console.log('Listener is working');
-//     if (!inputEl.value) {
-//         let inputText =  inputDefaultText;
-//         nameCardEl.innerHTML =  inputText;
-//     } else {
-//         let inputText = inputEl.value;
-//         nameCardEl.innerHTML =  inputText;
-//     };
-// };
-
-inputEl.addEventListener('keyup', writeCard);
-
-const inputTelEl =  document.querySelector('.input__tel');
-const iconMobEl = document.querySelector('.icon__link--mobile');
-
-function insertHref () {
-    console.log('Start insertHref');
-    const inputTelText = inputTelEl.value;
-    iconMobEl.href = `tel:${inputTelText}`;
-    iconMobEl.title = `${inputTelText}`;
-}
+linkedinInput.addEventListener('change', writeLinkedin);
 
 inputTelEl.addEventListener('change', insertHref);
 //CAMPO JOB
