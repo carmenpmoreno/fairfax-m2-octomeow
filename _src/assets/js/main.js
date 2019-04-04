@@ -13,8 +13,8 @@ function changeButtonColor(event){
 
     formButton.classList.add('share-button-pushed');
     
-    if (emptyInput.value === ''){
-        previewIcon.classList.add('contact__list--rrss-default');}
+    //if (emptyInput.value === ''){
+       // previewIcon.classList.add('contact__list--rrss-default');}
     
 }
 // añadir cambio de color en los iconos cuando su input está vacia
