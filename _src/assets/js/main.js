@@ -40,9 +40,6 @@ function writeCard () {
 
 inputEl.addEventListener('keyup', writeCard);
 
-
-inputEl.addEventListener('keyup', writeCard);
-
 const inputTelEl =  document.querySelector('.input__tel');
 const iconMobEl = document.querySelector('.icon__link--mobile');
 
@@ -53,4 +50,4 @@ function insertHref () {
     iconMobEl.title = `${inputTelText}`;
 }
 
-inputTelEl.addEventListener('keyup', insertHref);
+inputTelEl.addEventListener('change', insertHref);
