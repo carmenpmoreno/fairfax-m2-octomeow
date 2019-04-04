@@ -27,7 +27,7 @@ function getJobValue(){
     if (jobEl.value){
         jobPreview.innerHTML = jobEl.value;
     }else{
-        fullNamePreview.innerHTML = defaultJob;
+        jobPreview.innerHTML = defaultJob;
     }
 }
 jobEl.addEventListener('keyup', getJobValue);
@@ -38,15 +38,15 @@ jobEl.addEventListener('keyup', getJobValue);
 const linkedInEl = document.getElementById(linkedin);
 const linkedInLink = document.getElementById('linkedin--link');
 const defaultLink = 'linkedin.com';
-
 function getLinkedInLink(){
-    if (linkedInEl.value){
-        linkedInLink.href = linkedInEl.value;
-    }else{
-        linkedInLink.href=defaultLink;
-    }
+    linkedInLink.href = linkedInEl.value || defaultLink;
 }
-
-
+// function getLinkedInLink(){
+//     if (linkedInEl.value){
+//         linkedInLink.href = linkedInEl.value;
+//     }else{
+//         linkedInLink.href=defaultLink;
+//     }
+// }
 linkedInEl.addEventListener('keyup', getLinkedInLink);
 console.log(linkedInEl.value);

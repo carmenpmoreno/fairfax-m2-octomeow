@@ -33,11 +33,11 @@
 }
 
 .card--header {
-    height: 75px;
+    
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
-    padding-bottom: 10px;
+    align-items: center;
+    padding:20px 5px 10px 0;
     background-color: $color-whiteSnow;
 }
 
@@ -63,5 +63,10 @@
     .occupation {
         font-size: 16px;
         color: $color-blueSky;
+    }
+}
+.user--profile__pic{
+    img{
+        display: block;
     }
 }
