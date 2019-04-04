@@ -1,0 +1,42 @@
+.fill-in__items {
+    border-bottom: 1px solid $color-greyLine;
+    margin-bottom: 10px;
+}
+.fill-in__item {
+    display: flex;
+    flex-direction: column;
+
+    .fill-in__input {
+        border: solid 1px $color-greenHospital;
+        min-width: 281px;
+        height: 30px;
+        margin-top: 6px;
+        margin-bottom: 20px;
+        padding-left: 5px; 
+    }
+
+    .fill-in__buttonImg-wrapper {
+        display: flex;
+        flex-direction: row;
+    
+        .fill-in__button {
+            height: 30px;
+            width: 140px;
+            margin-top: 6px;
+            margin-bottom: 20px;
+            border: 0px;
+            border-radius: 5px;
+            background-color: $color-orangeButane;
+            box-shadow: 0 0 5px $color-greyLight;
+        }
+        .img-profile__preview {
+            height: 30px;
+            width: 30px;
+            border: solid 1px $color-greenHospital;
+            margin-top: 6px;
+            margin-left: 20px;
+        }   
+    }
+}
+
+

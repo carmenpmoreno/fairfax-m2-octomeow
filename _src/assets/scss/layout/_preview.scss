@@ -1,0 +1,72 @@
+.contact__link {
+    background: $color-whiteSnow;
+}
+
+.contact__list {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+
+    &--icon {
+        font-size: 18px;
+    }
+}
+
+.contact__list--rrss {
+    display: flex;
+    border: solid $color-greenHospital 1px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+    a {
+        color: $color-blueCoal;
+        text-decoration: none;
+        padding: 7px 9px;
+    }
+}
+.pad--mobile a {
+    padding: 7px 12px;
+}
+
+.card-preview {
+    width: 240px;
+    height: 329px;
+}
+
+.card--header {
+    height: 75px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    background-color: $color-whiteSnow;
+}
+
+.sidebar {
+    height: 42px;
+    width: 5px;
+    background-color: $color-greenHospital;
+}
+
+.main--data {
+    width: 100%;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-cardName;
+
+    .full-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-blueCoal;
+        text-transform: capitalize;
+    }
+
+    .occupation {
+        font-size: 16px;
+        color: $color-blueSky;
+        text-transform: capitalize;
+    }
+}

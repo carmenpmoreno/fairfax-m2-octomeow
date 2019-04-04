@@ -3,22 +3,8 @@
     flex-direction: column;
 }
 
-.legend__container {
-    width: 100%;
-    @include legendDistribution;
-}
-
 .legend__icon--share {
-    @include formIcon;
     margin-right: 12px;
-}
-
-.form__arrow {
-    color: $color-greyMouse;
-    width: 16px;
-    height: 18px;
-    transform: rotate(180deg);
-    align-self: flex-end;   
 }
 
 .share-button {
@@ -38,7 +24,7 @@
     }
 }
 .section__twitter {
-    width: 280px;
+    width: 100%;
     text-align: center;
     padding: 20px 20px 30px 20px;
     margin: auto;
@@ -58,9 +44,8 @@
     width: 280px;
     color: $color-orangeButane;
     font-size: 12px;
-    text-align: left;
-    display: flex;
-    overflow: hidden;
+    display: block;
+    margin: auto;
 }
 
 .button-twitter {
