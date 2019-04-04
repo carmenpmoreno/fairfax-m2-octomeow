@@ -2,19 +2,14 @@
 
 console.log('>> Ready :)');
 
-// prueba 1: Añado clase "".email" al enlace de email en _contact.html
-// const previewLink = document.querySelector('.email');
-
-// PRUEBA 2: Pruebo a rellenar con javascript el contenido href desde input
-
-    // Mi objetivo es el href del link ".email". Buscar otra forma de detectar elemento
-const previewLink = document.element('href');
+// Añado clase "".email" al enlace de email en _contact.html
+const previewLink = document.querySelector('.email');
+const emailInput = document.getElementById('email');
 
 // handler
-function insertEmailOnPreview() {
-    const emailInput = document.querySelector('.fill-in__input');
-    previewLink = emailInput.innerHTML;
-}
+function insertEmailOnPreview () {
+    previewLink.href = emailInput.value;
+};
 
 // listener
-previewLink.addEventListener('href', insertEmailOnPreview);
+emailInput.addEventListener('keyup', insertEmailOnPreview);
