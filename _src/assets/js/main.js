@@ -1,4 +1,4 @@
-'use strict';
+
 
 console.log('>> Ready :)');
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -51,3 +51,17 @@ function insertHref () {
 }
 
 inputTelEl.addEventListener('change', insertHref);
+//CAMPO JOB
+const jobEl = document.getElementById('job');
+const jobPreview = document.querySelector('.occupation');
+const defaultJob = "Profesión";
+jobPreview.innerHTML = defaultJob;
+
+function getJobValue(){
+    if (jobEl.value){
+        jobPreview.innerHTML = jobEl.value;
+    }else{
+        jobPreview.innerHTML = defaultJob;
+    }
+}
+jobEl.addEventListener('keyup', getJobValue);
