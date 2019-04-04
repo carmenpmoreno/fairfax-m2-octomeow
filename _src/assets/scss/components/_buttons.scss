@@ -5,6 +5,7 @@
     align-items: center;
     border: 1px solid $color-whiteSnow;
     border-radius: 15px;
+    padding: 5px;
     #reset{
         border: 0px transparent;
         background-color:transparent;
@@ -12,7 +13,7 @@
         color: $color-greyMouse;
         font-size: 14px;
         text-transform: capitalize;
-        padding: 10px;
+        padding-left: 10px;
     }
 
 }
