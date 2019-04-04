@@ -51,3 +51,27 @@ function insertHref () {
 }
 
 inputTelEl.addEventListener('change', insertHref);
+
+
+//COLLAPSABLE 
+
+//DISEÑO
+
+//Guardo el legend para ponerle un listener
+
+const legendEl = document.querySelector('.collapsible');
+const contentEl = document.querySelector('.option__distribution');
+
+//Handler
+
+function formCollapse () {
+    console.log('listener works');
+    if (contentEl.style.display === "flex") {
+        contentEl.style.display = "none";
+    } else {
+        contentEl.style.display = "flex";
+    }
+}
+
+//Listener
+legendEl.addEventListener('click', formCollapse);
