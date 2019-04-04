@@ -25,6 +25,23 @@
         text-decoration: none;
         padding: 7px 9px;
     }
+
+    &-disabled {
+        display: flex;
+        border: solid $color-greyLine 1px;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+
+        a {
+            color: $color-greyLine;
+            padding: 7px 9px;
+        }
+    }
+}
+.pad--mobile a {
+    padding: 7px 12px;
 }
 
 .card-preview {
@@ -58,10 +75,12 @@
         font-size: 18px;
         font-weight: bold;
         color: $color-blueCoal;
+        text-transform: capitalize;
     }
 
     .occupation {
         font-size: 16px;
         color: $color-blueSky;
+        text-transform: capitalize;
     }
 }
