@@ -1,40 +1,20 @@
 'use strict';
 
 console.log('>> Ready :)');
-// // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
-// // Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-console.log('Hola');
+// prueba 1: Añado clase "".email" al enlace de email en _contact.html
+// const previewLink = document.querySelector('.email');
 
-// elemento html
+// PRUEBA 2: Pruebo a rellenar con javascript el contenido href desde input
 
-const namePreview = document.getElementById('name-preview');
-const nameInput = document.getElementById('name-imput');
+    // Mi objetivo es el href del link ".email". Buscar otra forma de detectar elemento
+const previewLink = document.element('href');
 
 // handler
-
-function addCurrentnameImput () {
-    if (nameInput.value) {
-        let nameText = nameInput.value;
-        namePreview.innerHTML = nameText;
-    }
-    else {
-        let nameText = 'Nombre de prueba';
-        namePreview.innerHTML = nameText;
-    }
-
-    // OTRA OPCIÓN: negando el valor
-    // if (!nameInput.value) {
-    //     let nameText = 'Nombre de prueba';
-    //     namePreview.innerHTML = nameText;
-    // }
-    // else {
-    //     let nameText = nameInput.value;
-    //     namePreview.innerHTML = nameText;
-    // }
+function insertEmailOnPreview() {
+    const emailInput = document.querySelector('.fill-in__input');
+    previewLink = emailInput.innerHTML;
 }
 
 // listener
-nameInput.addEventListener('keyup', addCurrentnameImput);
+previewLink.addEventListener('href', insertEmailOnPreview);
