@@ -18,17 +18,18 @@
     border-radius: 12px;
     margin:30px auto;
     text-align: center;
-    &:active {
-        background-color: $color-greyBorderline;   
+
+    &-pushed {
+    background-color: $color-greyLine;
     }
 }
-
 .section__twitter {
     width: 100%;
     text-align: center;
-    padding: 20px 37px 30px;
-    border-top: 1px solid $color-greyBorderline;
-    border-bottom: 1px solid $color-greyBorderline;
+    padding: 20px 20px 30px 20px;
+    margin: auto;
+    border-top: 1px solid $color-greyLine;
+    border-bottom: 1px solid $color-greyLine;
 }
 
 .title-twitter {

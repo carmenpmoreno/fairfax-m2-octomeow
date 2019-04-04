@@ -26,22 +26,22 @@
         padding: 7px 9px;
     }
 
-    &-disabled {
-        display: flex;
-        border: solid $color-greyLine 1px;
-        border-radius: 50%;
-        justify-content: center;
-        align-items: center;
-        margin-right: 10px;
-
-        a {
-            color: $color-greyLine;
-            padding: 7px 9px;
-        }
-    }
 }
 .pad--mobile a {
     padding: 7px 12px;
+}
+.contact__list--rrss-default {
+    display: flex;
+    border: solid $color-greyLine 1px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+    a {
+        color: $color-greyLine;
+        padding: 7px 9px;
+    }
 }
 
 .card-preview {
@@ -50,11 +50,11 @@
 }
 
 .card--header {
-    height: 75px;
+    
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
-    padding-bottom: 10px;
+    align-items: center;
+    padding:20px 5px 10px 0;
     background-color: $color-whiteSnow;
 }
 
@@ -81,6 +81,10 @@
     .occupation {
         font-size: 16px;
         color: $color-blueSky;
-        text-transform: capitalize;
+    }
+}
+.user--profile__pic{
+    img{
+        display: block;
     }
 }
