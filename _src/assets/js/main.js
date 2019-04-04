@@ -1,4 +1,5 @@
 
+'use strict';
 
 console.log('>> Ready :)');
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -16,27 +17,6 @@ function writeCard () {
     nameCardEl.innerHTML =  inputText;
 };
 
-// function writeCard () {
-//     console.log('Listener is working');
-//     if (inputEl.value) {
-//     let inputText = event.currentTarget.value;
-//     nameCardEl.innerHTML =  inputText;
-//     } else {
-//     let inputText =  inputDefaultText;
-//     nameCardEl.innerHTML =  inputText;
-//     };
-// };
-
-// function writeCard () {
-//     console.log('Listener is working');
-//     if (!inputEl.value) {
-//         let inputText =  inputDefaultText;
-//         nameCardEl.innerHTML =  inputText;
-//     } else {
-//         let inputText = inputEl.value;
-//         nameCardEl.innerHTML =  inputText;
-//     };
-// };
 
 inputEl.addEventListener('keyup', writeCard);
 
