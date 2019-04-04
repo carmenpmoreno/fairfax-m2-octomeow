@@ -7,8 +7,9 @@ const emailInput = document.getElementById('email');
 // handler
 function insertEmailOnPreview () {
     previewLink.href = `mailto:${emailInput.value}`;
+    previewLink.title = `email:${emailInput.value}`;
 };
 
 // listener
 emailInput.addEventListener('keyup', insertEmailOnPreview);
-previewLink.addEventListener ('mouseover', )
+emailInput.addEventListener('mouseover', insertEmailOnPreview);
