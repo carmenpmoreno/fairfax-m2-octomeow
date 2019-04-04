@@ -40,6 +40,9 @@
         }
     }
 }
+.pad--mobile a {
+    padding: 7px 12px;
+}
 
 .card-preview {
     width: 240px;
@@ -72,10 +75,12 @@
         font-size: 18px;
         font-weight: bold;
         color: $color-blueCoal;
+        text-transform: capitalize;
     }
 
     .occupation {
         font-size: 16px;
         color: $color-blueSky;
+        text-transform: capitalize;
     }
 }
