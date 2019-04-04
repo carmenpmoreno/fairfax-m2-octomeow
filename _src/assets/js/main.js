@@ -1,7 +1,31 @@
 'use strict';
 
-console.log('>> Ready :)');
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+const nameCard= document.querySelector('.full-name');
+const inputName= document.querySelector('.fill-in__input');
+const defaultText= "Nombre de prueba";
+function writeName(){
+    console.log('hola');
+    if (!inputName.value){
+        nameCard.innerHTML= defaultText;
+    }
+    else{
+        nameCard.innerHTML=inputName.value;
+    }
+    
+  //nameCard.innerHTML= inputName.value || defaultText;
+} 
+
+inputName.addEventListener('keyup', writeName);
+
+//LINKEDIN
+
+const linkedinPreview= document.querySelector('.link__linkedin');
+const linkedinInput= document.getElementById('linkedin');
+const linkedinDefaultText='https://www.linkedin.com';
+
+function writeLinkedin(){
+    console.log('works');
+    linkedinPreview.href= linkedinInput.value || linkedinDefaultText;
+};
+
+linkedinInput.addEventListener('change', writeLinkedin);
