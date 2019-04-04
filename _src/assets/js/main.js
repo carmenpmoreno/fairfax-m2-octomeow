@@ -1,3 +1,4 @@
+
 'use strict';
 
 console.log('>> Ready :)');
@@ -6,29 +7,65 @@ let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-//INPUT NAME
-const previewName = document.querySelector('.full-name');
-const inputName = document.querySelector('#full_name');
-const defaultName = 'Nombre de Prueba';
+const inputEl = document.querySelector('.fill-in__input');
+const inputDefaultText = "Nombre de prueba";
+const nameCardEl = document.querySelector('.full-name');
 
-function fillCardInputName() {
-    const inputNameValue = inputName.value;
-    previewName.innerHTML = inputNameValue || defaultName;
+function writeCard () {
+    console.log('Listener is working');
+    const inputText = inputEl.value || inputDefaultText;
+    nameCardEl.innerHTML =  inputText;
+};
+
+// function writeCard () {
+//     console.log('Listener is working');
+//     if (inputEl.value) {
+//     let inputText = event.currentTarget.value;
+//     nameCardEl.innerHTML =  inputText;
+//     } else {
+//     let inputText =  inputDefaultText;
+//     nameCardEl.innerHTML =  inputText;
+//     };
+// };
+
+// function writeCard () {
+//     console.log('Listener is working');
+//     if (!inputEl.value) {
+//         let inputText =  inputDefaultText;
+//         nameCardEl.innerHTML =  inputText;
+//     } else {
+//         let inputText = inputEl.value;
+//         nameCardEl.innerHTML =  inputText;
+//     };
+// };
+
+inputEl.addEventListener('keyup', writeCard);
+
+const inputTelEl =  document.querySelector('.input__tel');
+const iconMobEl = document.querySelector('.icon__link--mobile');
+
+function insertHref () {
+    console.log('Start insertHref');
+    const inputTelText = inputTelEl.value;
+    iconMobEl.href = `tel:${inputTelText}`;
+    iconMobEl.title = `${inputTelText}`;
 }
-inputName.addEventListener('keyup', fillCardInputName);
 
+inputTelEl.addEventListener('change', insertHref);
+//CAMPO JOB
+const jobEl = document.getElementById('job');
+const jobPreview = document.querySelector('.occupation');
+const defaultJob = "Profesión";
+jobPreview.innerHTML = defaultJob;
 
-//INPUT LASTNAME
-const previewJob = document.querySelector('.occupation');
-const inputJob = document.querySelector('#job');
-const defaultJob = 'SuperWoman';
-
-function fillCardInputJob() {
-    const inputJobValue = inputJob.value;
-    previewJob.innerHTML = inputJobValue || defaultJob;
+function getJobValue(){
+    if (jobEl.value){
+        jobPreview.innerHTML = jobEl.value;
+    }else{
+        jobPreview.innerHTML = defaultJob;
+    }
 }
-inputJob.addEventListener('keyup', fillCardInputJob);
-
+jobEl.addEventListener('keyup', getJobValue);
 
 //ADD link href gitHub
 const inputLink = document.getElementById('github');
@@ -40,4 +77,3 @@ function addMyLink() {
     addLink.href = inputLink.value || defaultLink;
 }
 inputLink.addEventListener('keyup', addMyLink);
-

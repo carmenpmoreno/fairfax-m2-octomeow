@@ -1,0 +1,18 @@
+
+.reset-button{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-whiteSnow;
+    border-radius: 15px;
+    #reset{
+        border: 0px transparent;
+        background-color:transparent;
+        font-family: $font-collapsibleLegend;
+        color: $color-greyMouse;
+        font-size: 14px;
+        text-transform: capitalize;
+        padding: 10px;
+    }
+
+}
