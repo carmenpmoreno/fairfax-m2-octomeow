@@ -1,8 +1,5 @@
 'use strict';
 
-// listener
-emailInput.addEventListener('keyup', insertEmailOnPreview);
-
 console.log('>> Ready :)');
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -10,14 +7,22 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 // FUNCTION ADD EMAIL ON PREVIEW ICON EMAIL
-// Añado clase "".email" al enlace de email en _contact.html
+// Añado clase "email" al enlace de email en _contact.html
 const previewLink = document.querySelector('.email');
 const emailInput = document.getElementById('email');
 
 // handler
 function insertEmailOnPreview () {
-    previewLink.href = `mailto:${emailInput.value}`;
+    if (emailInput.value) {
+        previewLink.href = `mailto:${emailInput.value}`;
+    }
+    else {
+        previewLink.href = '';
+    }
 };
+// listener
+emailInput.addEventListener('keyup', insertEmailOnPreview);
+
 
 const inputEl = document.querySelector('.fill-in__input');
 const inputDefaultText = "Nombre de prueba";
