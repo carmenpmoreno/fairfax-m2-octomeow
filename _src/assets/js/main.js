@@ -10,6 +10,22 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
+// COLORES
+
+const colorCardGreenEl = document.querySelector('.color-item--green');
+const colorCardRedEl =  document.querySelector('.color-item--red');
+const colorCardGreyEl = document.querySelector('.color-item--grey');
+
+function greenClickHandler() {
+    
+}
+
+
+colorCardGreenEl.addEventListener('click', greenClickHandler);
+colorCardRedEl.addEventListener('click', redClickHandler);
+colorCardGreyEl.addEventListener('click', greyClickHandler);
+
+
 
 // NOMBRE
 

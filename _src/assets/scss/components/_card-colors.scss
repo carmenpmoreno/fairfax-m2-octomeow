@@ -1,0 +1,41 @@
+.card--header--green {
+  .sidebar {
+    background-color: $color-greenHospital;
+  }
+
+  .full-name {
+    color: $color-blueCoal;
+  }
+
+  .occupation {
+    color: $color-blueSky;
+  }
+}
+
+.card--header--red {
+  .sidebar {
+    background-color: #e95626;
+  }
+
+  .full-name {
+    color: #420101;
+  }
+
+  .occupation {
+    color: #bd1010;
+  }
+}
+
+.card--header--grey {
+  .sidebar {
+    background-color: #a0c0cf;
+  }
+
+  .full-name {
+    color: #3e5b65;
+  }
+
+  .occupation {
+    color: #dfe5eb;
+  }
+}
