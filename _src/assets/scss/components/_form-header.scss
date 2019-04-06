@@ -29,18 +29,10 @@ fieldset {
         }
 
         .legend__arrow {
-<<<<<<< HEAD
-            flex-basis: 54px;
-            padding: 13px 0;
-            color: $color-greyMouse;
-            display: flex;
-            justify-content: flex-end;
-=======
             padding: 13px 0;  
             margin-left: auto;              
             color: $color-greyMouse;
             transform: rotate(180deg);
->>>>>>> master
         }
     }
 }
