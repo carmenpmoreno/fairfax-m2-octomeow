@@ -3,12 +3,14 @@
     background-color: $color-greenHospital;
   }
 
-  .full-name {
-    color: $color-blueCoal;
-  }
-
-  .occupation {
-    color: $color-blueSky;
+  .main--data {
+    .full-name {
+        color: $color-blueCoal;
+    }
+    
+    .occupation {
+        color: $color-blueSky;
+    }
   }
 }
 
@@ -17,12 +19,14 @@
     background-color: #e95626;
   }
 
-  .full-name {
-    color: #420101;
-  }
+  .main--data{
+    .full-name {
+        color: #420101;
+    }
 
-  .occupation {
-    color: #bd1010;
+    .occupation {
+        color: #bd1010;
+    }
   }
 }
 
@@ -31,11 +35,13 @@
     background-color: #a0c0cf;
   }
 
-  .full-name {
-    color: #3e5b65;
-  }
+  .main--data {
+    .full-name {
+        color: #3e5b65;
+    }
 
-  .occupation {
-    color: #dfe5eb;
-  }
+    .occupation {
+        color: grey;
+    }
+  }   
 }

@@ -15,9 +15,27 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 const colorCardGreenEl = document.querySelector('.color-item--green');
 const colorCardRedEl =  document.querySelector('.color-item--red');
 const colorCardGreyEl = document.querySelector('.color-item--grey');
+const cardHeaderEl = document.querySelector('.card--header');
 
 function greenClickHandler() {
-    
+    console.log('Green listener works');
+    cardHeaderEl.classList.remove('card--header--red');
+    cardHeaderEl.classList.remove('card--header--grey');
+    cardHeaderEl.classList.add('card--header--green');
+}
+
+function redClickHandler() {
+    console.log('Red listener works');
+    cardHeaderEl.classList.remove('card--header--green');
+    cardHeaderEl.classList.remove('card--header--grey');
+    cardHeaderEl.classList.add('card--header--red');
+}
+
+function greyClickHandler() {
+    console.log('Grey listener works');
+    cardHeaderEl.classList.remove('card--header--red');
+    cardHeaderEl.classList.remove('card--header--green');
+    cardHeaderEl.classList.add('card--header--grey');
 }
 
 
