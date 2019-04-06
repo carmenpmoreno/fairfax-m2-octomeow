@@ -14,14 +14,14 @@
 
 .contact__list--rrss {
     display: flex;
-    border: solid $color-greenHospital 1px;
+    border: solid 1px;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
 
     a {
-        color: $color-blueCoal;
+        //color: $color-blueCoal;
         text-decoration: none;
         padding: 7px 9px;
     }
@@ -61,7 +61,7 @@
 .sidebar {
     height: 42px;
     width: 5px;
-    background-color: $color-greenHospital;
+    //background-color: $color-greenHospital;
 }
 
 .main--data {
@@ -74,17 +74,63 @@
     .full-name {
         font-size: 18px;
         font-weight: bold;
-        color: $color-blueCoal;
+        //color: $color-blueCoal;
         text-transform: capitalize;
     }
 
     .occupation {
         font-size: 16px;
-        color: $color-blueSky;
+        //color: $color-blueSky;
     }
 }
 .user--profile__pic{
     img{
         display: block;
+    }
+}
+
+//prueba change-color
+.preview-green {
+    .sidebar {
+        background: $color-greenHospital;
+    }
+    .contact__list--rrss {
+        border-color: $color-greenHospital;
+    }
+    .occupation {
+        color: $color-blueSky;
+    }
+    .full-name, .contact__list--rrss a {
+        color: $color-blueCoal;
+    }
+}
+
+.preview-red {
+    .sidebar {
+        background: #e95626;
+    }
+    .contact__list--rrss {
+        border-color: #e95626;
+    }
+    .occupation {
+        color: #bd1010;
+    }
+    .full-name, .contact__list--rrss a {
+        color: #420101;
+    }
+}
+
+.preview-blue {
+    .sidebar {
+        background: #dfe5eb;
+    }
+    .contact__list--rrss {
+        border-color: #dfe5eb;
+    }
+    .occupation {
+        color: #a0c0cf;
+    }
+    .full-name, .contact__list--rrss a {
+        color: #3e5b65;
     }
 }
