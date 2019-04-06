@@ -16,10 +16,11 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 const inputEl = document.querySelector('.fill-in__input');
 const inputDefaultText = "Nombre de prueba";
 const nameCardEl = document.querySelector('.full-name');
+const defaultName = "Nombre de prueba";
 
 function writeCard () {
     console.log('Listener is working');
-    const inputText = inputEl.value || inputDefaultText;
+    const inputText = inputEl.value || defaultName;
     nameCardEl.innerHTML =  inputText;
 };
 
@@ -114,3 +115,7 @@ function changeButtonColor(event){
 // añadir cambio de color en los iconos cuando su input está vacia
 
 formButton.addEventListener('click', changeButtonColor);
+
+
+//Color select
+
