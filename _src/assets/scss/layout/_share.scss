@@ -1,0 +1,67 @@
+.share {
+    display: flex;
+    flex-direction: column;
+}
+
+.legend__icon--share {
+    margin-right: 12px;
+}
+
+.share-button {
+    height: 50px;
+    width: 199px;
+    background-color: $color-orangeButane;
+    color: $color-whiteSnow;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 12px;
+    margin:30px auto;
+    text-align: center;
+
+    &-pushed {
+    background-color: $color-greyLine;
+    }
+}
+.section__twitter {
+    width: 100%;
+    text-align: center;
+    padding: 20px 20px 30px 20px;
+    margin: auto;
+    border-top: 1px solid $color-greyLine;
+    border-bottom: 1px solid $color-greyLine;
+}
+
+.title-twitter {
+    font-family: $font-collapsibleLegend;
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-greyMouse;
+    margin-bottom: 5px;
+}
+
+.twitter-link {
+    width: 280px;
+    color: $color-orangeButane;
+    font-size: 12px;
+    display: block;
+    margin: auto;
+}
+
+.button-twitter {
+    width: 181px;
+    height: 30px;
+    background-color: $color-blueTwitter;
+    color: $color-whiteSnow;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    font-family: $font-collapsibleLegend;
+    border: none;
+    border-radius: 3px;
+}
+
+.twitter-icon {
+    width: 18px;
+    height: 18px;
+}

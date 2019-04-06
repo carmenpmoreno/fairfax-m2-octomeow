@@ -1,6 +1,7 @@
 fieldset {
     padding: 0;
     margin: 0;
+    border: none;
 }
 
 .legend {
@@ -14,25 +15,32 @@ fieldset {
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: flex-start;
         flex-wrap: nowrap;
 
         .legend__icon {
             padding: 13px 0;
-            flex-basis: 54px;
+            margin-right: 10px;
             color: $color-orangeButane;
         }
 
         .legend__title {
-            flex-basis: calc(100% - 108px);
             text-align: left;
         }
 
         .legend__arrow {
+<<<<<<< HEAD
             flex-basis: 54px;
             padding: 13px 0;
             color: $color-greyMouse;
             display: flex;
             justify-content: flex-end;
+=======
+            padding: 13px 0;  
+            margin-left: auto;              
+            color: $color-greyMouse;
+            transform: rotate(180deg);
+>>>>>>> master
         }
     }
 }

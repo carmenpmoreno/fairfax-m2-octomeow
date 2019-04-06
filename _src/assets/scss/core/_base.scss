@@ -1,5 +1,66 @@
-*, *::after, *::before {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.visually-hidden { /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    line-height: 1.4;
+    font-size: 13px;
+    color: $color-greyMouse;
+    background: $color-whiteSnow;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+}
+
+.main-container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.central {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+}
+
+@media all and (min-width: 768px) {
+    .main-container {
+        max-width: 760px;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .main-container {
+        max-width: 1000px;
+    }
 }

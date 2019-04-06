@@ -1,0 +1,36 @@
+.main-footer {
+    padding: 20px 0;
+    border-top: solid $color-greyLine 1px;
+    background: $color-whiteSnow;
+    width: 100%;
+
+    &__list {
+
+        &-text {
+            font-size: 14px;
+            color: $color-greyLight;
+        }
+
+        &-logo {
+            width: 205px;
+            height: 40px;
+            margin: 10px auto 0;
+        }
+
+        &-img {
+            width: 100%;
+        }
+    }
+
+    @media all and (min-width: 768px) {
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &-logo {
+                margin: 0;
+            }
+        }
+    }
+}
