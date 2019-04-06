@@ -55,12 +55,12 @@ body {
 
 @media all and (min-width: 768px) {
     .main-container {
-        max-width: 760px;
+        max-width: 768px;
     }
 }
 
-@media all and (min-width: 1200px) {
-    .main-container {
-        max-width: 1000px;
-    }
-}
+// //@media all and (min-width: 1200px) {
+//     .main-container {
+//         max-width: 1000px;
+//     }
+// }
