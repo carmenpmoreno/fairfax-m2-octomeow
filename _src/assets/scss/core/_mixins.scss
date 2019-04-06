@@ -11,3 +11,9 @@
     width: 16px;
     height: 18px;
 }
+
+@mixin centerY{
+    position:relative;
+    top:50%;
+    transform: translateY(-50%);
+}

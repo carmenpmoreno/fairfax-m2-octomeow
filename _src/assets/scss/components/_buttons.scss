@@ -1,18 +1,17 @@
 
-.reset-button{
+.reset--button{
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     border: 1px solid $color-whiteSnow;
     border-radius: 15px;
-    #reset{
-        border: 0px transparent;
-        background-color:transparent;
-        font-family: $font-collapsibleLegend;
-        color: $color-greyMouse;
-        font-size: 14px;
-        text-transform: capitalize;
-        padding: 10px;
+    padding: 5px 10px;
+    background-color:transparent;
+    font-family: $font-collapsibleLegend;
+    color: $color-greyMouse;
+    font-size: 12px;
+    text-transform: capitalize;
+    i{
+        margin-right:10px;
     }
-
 }
