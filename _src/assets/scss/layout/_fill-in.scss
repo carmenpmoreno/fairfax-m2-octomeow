@@ -1,6 +1,7 @@
 .fill-in__items {
     border-bottom: 1px solid $color-greyLine;
     margin-bottom: 10px;
+    display: flex;
 }
 .fill-in__item {
     display: flex;
