@@ -8,16 +8,16 @@
 
     .preview {
         min-height: 300px;
+        min-width: 320px;
         background: linear-gradient($color-silverBlue, $color-paleGrey);
-        width: 100%;
     }
 
     @media all and (min-width: 768px) {
+
         display: flex;
         flex-direction: row-reverse;
 
-        .preview {
-            flex-basis: 50%;
+        .preview {            
             margin: 23px 40px 21px 0;
             border-radius: 6px;
         }

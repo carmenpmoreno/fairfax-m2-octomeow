@@ -7,6 +7,10 @@
     margin-right: 12px;
 }
 
+.legend__arrow {
+    margin:0;
+}
+
 .share-button {
     height: 50px;
     width: 199px;
@@ -19,14 +23,14 @@
     margin:30px auto;
     text-align: center;
     &:active {
-        background-color: $color-greyBorderline;   
+        background-color: $color-greyBorderline; 
     }
 }
 
 .section__twitter {
     width: 100%;
     text-align: center;
-    padding: 20px 37px 30px;
+    padding: 20px 0 30px;
     border-top: 1px solid $color-greyBorderline;
     border-bottom: 1px solid $color-greyBorderline;
 }
