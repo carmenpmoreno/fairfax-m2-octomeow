@@ -16,11 +16,11 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 const inputEl = document.querySelector('.fill-in__input');
 const inputDefaultText = "Nombre de prueba";
 const nameCardEl = document.querySelector('.full-name');
-const defaultName = "Nombre de prueba";
+
 
 function writeCard () {
     console.log('Listener is working');
-    const inputText = inputEl.value || defaultName;
+    const inputText = inputEl.value || inputDefaultText;
     nameCardEl.innerHTML =  inputText;
 };
 
@@ -106,7 +106,7 @@ const emptyInput= document.querySelector('.fill-in__input');
 function changeButtonColor(event){
     event.preventDefault();
 
-    formButton.classList.add('share-button-pushed');
+    form-Button.classList.add('share-button-pushed');
     
     //if (emptyInput.value === ''){
        // previewIcon.classList.add('contact__list--rrss-default');}
@@ -119,3 +119,37 @@ formButton.addEventListener('click', changeButtonColor);
 
 //Color select
 
+const cardPreviewEl = document.querySelector('.card-preview');
+const palettePickerEl = document.querySelector('.option__container');
+
+
+const paletteIds =[];
+const paletteClasses = [];
+
+for (let i=1; i<=3; i++){
+    paletteIds.push(palettePickerEl.querySelector(`#p${i}`));
+    paletteClasses.push(palettePickerEl.querySelector(`.palette--${i}`).className); 
+};
+console.log(paletteIds);
+console.log(paletteClasses);
+
+for (let i=0; i<=2; i++){
+
+    function changeColor(event){
+        //Uso current target para saber qué paleta está seleccionada
+        const selectedItem = (event.currentTarget);
+        //busco en qué posición está colocado en el array 
+        const selectedItemIndex =paletteIds.indexOf(selectedItem);
+        //añado la clase que esté en esa misma posición 
+        const selectedClass = paletteClasses[selectedItemIndex];
+        console.log(selectedClass);
+        cardPreviewEl.classList.remove('default--palette');
+        //Elimino todas las posibles clases que pudiera haber seleccionado antes
+        for(let i = 0; i<=2; i++){
+            cardPreviewEl.classList.remove(`${paletteClasses[i]}`);
+        };
+        cardPreviewEl.classList.add(`${selectedClass}`);
+    };
+
+paletteIds[i].addEventListener('click', changeColor);
+}
