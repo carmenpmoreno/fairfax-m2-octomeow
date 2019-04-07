@@ -1,4 +1,3 @@
-
 'use strict';
 
 
@@ -16,21 +15,30 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 //  2. que oculte ese div cuando hagamos click en el legend
 //  3.que se cambie la orientación de la flecha cuando hagamos click en el legend
 
-// *******************TO DO: div en sección "share" y cambio la orientación flecha
-// OJO!! CREO UNA CLASE NUEVA EN DESIGN.HTML en su contenedor "label"
+// *******************TO DO: 
+    // hacer lo mismo con el resto de secciones
+    // div en sección "share" y cambio la orientación flecha
 
-// Crear una constante para el contenedor del deplegable todas las secciones y otra para el "legend" de todas las secciones
+// NOTA: AÑADO CLASES NUEVAS en la sección FILL-IN y otra para el "legend"
 
 const containerCollapsable = document.querySelector('.container-collapsable');
-const legendsForm = document.querySelector('legend');
+const legendsForm = document.querySelector('.legend-collapsable');
 
 // Hacer un Listener sobre el "legend" con event click
-legendsForm.addEventListener('click', collapseForm)
+legendsForm.addEventListener('click', collapseForm);
 
 // Crear una función handler
-
-        // que oculte el div
-        // o que lo muestre, pero entonces queoculte los divs de las otras secciones
+function collapseForm () {
+    // que muestre el div si está oculto
+    // TO DO:  pero entonces queoculte los divs de las otras secciones
+    if (containerCollapsable.classList.contains('hidden-collapsables')) {
+        containerCollapsable.classList.remove('hidden-collapsables');
+    }
+    else {
+    //     // o que lo oculte
+    containerCollapsable.classList.add('hidden-collapsables');
+    }
+}
 
 
 // NOMBRE
