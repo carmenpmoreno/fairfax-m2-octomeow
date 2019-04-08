@@ -94,7 +94,7 @@ const paletteClasses = [];
 
 function writeLinkedin(){
     console.log('works');
-    linkedinPreview.href= 'https://www.'+linkedinInput.value || linkedinDefaultText;
+    linkedinPreview.href= 'https://www.'+ linkedinInput.value || linkedinDefaultText;
 };
 
 linkedinInput.addEventListener('change', writeLinkedin);
