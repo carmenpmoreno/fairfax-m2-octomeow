@@ -1,9 +1,9 @@
 .main-footer {
-    padding: 20px 0;
+    padding: 20px 40px;
     border-top: solid $color-greyLine 1px;
     background: $color-whiteSnow;
     width: 100%;
-
+    
     &__list {
 
         &-text {
@@ -23,11 +23,12 @@
     }
 
     @media all and (min-width: 768px) {
+        
         &__list {
             display: flex;
             justify-content: space-between;
             align-items: center;
-
+            
             &-logo {
                 margin: 0;
             }

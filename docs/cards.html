@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="e">
+<html lang="es">
     
     <head>
         <meta charset="UTF-8">
@@ -16,172 +16,175 @@
     </head>
     
     <body>
-        <header>
-            <div class="header--container">
-                <img class="logo" src="assets/images/tarjetas-molonas.svg" alt="logo awesome profile cards">
-            </div>
+        <header class="header wrapper">
+            <section class="header--container main-container"> <a href="index.html"><img class="logo" src="assets/images/tarjetas-molonas.svg" alt="logo awesome profile cards"></a>
+
+            </section>
         </header>
         <main class="cards__container">
-            <section class="preview"></section>
             <form class="form" action="">
-                <fieldset class="preview">
-                    <legend class="legend test">
-                        <div class="reset-button">
-                            <label for="reset" class="visually-hidden">Botón de borrar</label> <i class="far fa-trash-alt"></i>
-
-                            <input type="reset"
-                            id="reset" />
-                        </div>
-                    </legend>
-                    <div class="card-preview">
-                        <div class="card--header">
-                            <div class="sidebar"></div>
-                            <div class="main--data">
-                                <p class="full-name">Nombre de prueba</p>
-                                <p class="occupation">SuperWoman</p>
+                <div class="wrapper">
+                    <fieldset class="preview">
+                        <section class="preview-container">
+                            <div class="button-container">
+                                <div class="reset-button">
+                                    <label for="reset" class="visually-hidden">Botón de borrar</label>
+                                    <button class="reset--button" type="button" id="reset"> <i class="far fa-trash-alt"></i>Reset</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="user--profile__pic">
-                            <img src="https://via.placeholder.com/240x200" alt="foto de perfil">
-                        </div>
-                        <div>
-                            <div class="contact__link">
-                                <ul class="contact__list">
-                                    <li class="contact__list--rrss pad--mobile"> <a href="">
+                            <div class="card-preview">
+                                <div class="card--header">
+                                    <div class="sidebar"></div>
+                                    <div class="main--data">
+                                        <p class="full-name"></p>
+                                        <p class="occupation"></p>
+                                    </div>
+                                </div>
+                                <div class="user--profile__pic">
+                                    <img src="assets/images/default-profile-pic.png" alt="foto de perfil"
+                                    />
+                                </div>
+                                <div>
+                                    <div class="contact__link">
+                                        <ul class="contact__list">
+                                            <li class="contact__list--rrss pad--mobile"> <a href="" class="icon__link--mobile" title="" id="linkMobile">
                 <i class="contact__list--icon fas fa-mobile-alt"></i>
             </a>
 
-                                    </li>
-                                    <li class="contact__list--rrss"> <a href="">
+                                            </li>
+                                            <li class="contact__list--rrss"> <a class="email" href="">
                 <i class="contact__list--icon far fa-envelope"></i>
             </a>
 
-                                    </li>
-                                    <li class="contact__list--rrss"> <a href="">
+                                            </li>
+                                            <li class="contact__list--rrss"> <a href="#" id="linkEdin" class=link__linkedin>
+
                 <i class="contact__list--icon fab fa-linkedin-in"></i>
             </a>
 
-                                    </li>
-                                    <li class="contact__list--rrss"> <a href="">
+                                            </li>
+                                            <li class="contact__list--rrss"> <a href="" id="linkGithub">
                 <i class="contact__list--icon fab fa-github-alt"></i>
             </a>
 
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
-                <div class="collapsible__container">
-                    <fieldset class="design">
-                        <legend class="legend legend__distribution"> <i class="far fa-object-ungroup fa-lg legend__icon"></i>
-
-                             <h2 class="legend__title title__legend--grey">Diseña</h2>
- <i class="fas fa-chevron-up legend__arrow"></i>
-
-                        </legend>
-                        <label class="option__distribution" for="colors">
-                            <p class="option__title subtitle__legend--grey">Colores</p>
-                            <div class="option__container">
-                                <label class="color__container">
-                                    <div class="color-item radio__container">
-                                        <input class="radio" type="radio" id="colors" name="colors" value="green"
-                                        /> <span class="checkmark"></span>
-
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="color-item green--1"></div>
-                                    <div class="color-item green--2"></div>
-                                    <div class="color-item green--3"></div>
-                                </label>
-                                <label class="color__container">
-                                    <div class="color-item radio__container">
-                                        <input class="radio" type="radio" id="colors" name="colors" value="green"
-                                        /> <span class="checkmark"></span>
-
-                                    </div>
-                                    <div class="color-item red--1"></div>
-                                    <div class="color-item red--2"></div>
-                                    <div class="color-item red--3"></div>
-                                </label>
-                                <label class="color__container">
-                                    <div class="color-item radio__container">
-                                        <input class="radio" type="radio" id="colors" name="colors" value="green"
-                                        /> <span class="checkmark"></span>
-
-                                    </div>
-                                    <div class="color-item grey--1"></div>
-                                    <div class="color-item grey--2"></div>
-                                    <div class="color-item grey--3"></div>
-                                </label>
-                            </div>
-                        </label>
-                    </fieldset>
-                    <fieldset class="fill-in">
-                        <legend class="legend legend__distribution"> <i class="far fa-keyboard legend__icon"></i>
-
-                             <h2 class="legend__title title__legend--grey">Rellena</h2>
- <i class="fas fa-chevron-up legend__arrow"></i>
-
-                        </legend>
-                        <div class="fill-in__items">
-                            <div class="fill-in__item">
-                                <label class="fill-in__label" for="full_name">Nombre completo</label>
-                                <input class="fill-in__input" id="full_name" type="text"
-                                name="full_name" placeholder="Ej: Sally Jill" required/>
-                            </div>
-                            <div class="fill-in__item">
-                                <label class="fill-in__label" for="job">Puesto</label>
-                                <input class="fill-in__input" id="job" type="text" name="job"
-                                placeholder="Ej: Front-end" />
-                            </div>
-                            <div class="fill-in__item">
-                                <label class="fill-in__label" for="img-profile">Imagen de perfil</label>
-                                <div class="fill-in__buttonImg-wrapper">
-                                    <input class="fill-in__button fill-in__buttonLabel" id="img-profile" type="button"
-                                    value="Añadir imagen" name="img-profile" />
-                                    <div class="img-profile__preview"></div>
                                 </div>
                             </div>
-                            <div class="fill-in__item">
-                                <label class="fill-in__label" for="email">Email</label>
-                                <input class="fill-in__input" id="email" type="email" name="email"
-                                placeholder="Ej: sally-jill@gmail.com" />
-                            </div>
-                            <div class="fill-in__item">
-                                <label class="fill-in__label" for="phone">Teléfono</label>
-                                <input class="fill-in__input" id="phone" type="tel" minlength="9"
-                                name="phone" placeholder="Ej: 555-55-55-55" />
-                            </div>
-                            <div class="fill-in__item">
-                                <label class="fill-in__label" class="fill-in__label" for="linkedin">Linkedin</label>
-                                <input class="fill-in__input" id="linkedin" type="text"
-                                name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
-                            </div>
-                            <div class="fill-in__item">
-                                <label class="fill-in__label" for="github">Github</label>
-                                <input class="fill-in__input" id="github" type="text" name="github"
-                                placeholder="Ej: @sally-hill" />
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset class="share">
-                        <legend class="legend legend__distribution"> <i class="fas fa-share-alt legend__icon legend__icon--share"></i>
-
-                             <h2 class="legend__title title__legend--grey">Comparte</h2>
- <i class="fas fa-chevron-up legend__arrow"></i>
-
-                        </legend>
-                        <button class="share-button" type="button"> <i class="far fa-address-card"></i>
-Crear tarjeta</button>
-                        <section class="section__twitter">
-                             <h3 class="title-twitter">La tarjeta ha sido creada:</h3>
- <a class="twitter-link" href="#">https://awesome-profile-card.com?id=A456Dkhhñjkhjkbsad</a>
-
-                            <button
-                            class="button-twitter"> <i class="fab fa-twitter twitter-icon"></i>
-Compartir en Twitter</button>
                         </section>
                     </fieldset>
+                    <div class="collapsible__container">
+                        <fieldset class="design">
+                            <legend class="legend legend__distribution"> <i class="far fa-object-ungroup fa-lg legend__icon"></i>
+
+                                 <h2 class="legend__title title__legend--grey">Diseña</h2>
+ <i class="fas fa-chevron-up legend__arrow"></i>
+
+                            </legend>
+                            <label class="option__distribution" for="colors">
+                                <p class="option__title subtitle__legend--grey">Colores</p>
+                                <div class="option__container">
+                                    <label class="color__container">
+                                        <div class="color-item radio__container">
+                                            <input class="radio" type="radio" id="colors" name="colors" value="green"
+                                            /> <span class="checkmark"></span>
+
+                                        </div>
+                                        <div class="color-item green--1"></div>
+                                        <div class="color-item green--2"></div>
+                                        <div class="color-item green--3"></div>
+                                    </label>
+                                    <label class="color__container">
+                                        <div class="color-item radio__container">
+                                            <input class="radio" type="radio" id="colors" name="colors" value="green"
+                                            /> <span class="checkmark"></span>
+
+                                        </div>
+                                        <div class="color-item red--1"></div>
+                                        <div class="color-item red--2"></div>
+                                        <div class="color-item red--3"></div>
+                                    </label>
+                                    <label class="color__container">
+                                        <div class="color-item radio__container">
+                                            <input class="radio" type="radio" id="colors" name="colors" value="green"
+                                            /> <span class="checkmark"></span>
+
+                                        </div>
+                                        <div class="color-item grey--1"></div>
+                                        <div class="color-item grey--2"></div>
+                                        <div class="color-item grey--3"></div>
+                                    </label>
+                                </div>
+                            </label>
+                        </fieldset>
+                        <fieldset class="fill-in">
+                            <legend class="legend legend__distribution"> <i class="far fa-keyboard legend__icon"></i>
+
+                                 <h2 class="legend__title title__legend--grey">Rellena</h2>
+ <i class="fas fa-chevron-up legend__arrow"></i>
+
+                            </legend>
+                            <div class="fill-in__items">
+                                <div class="fill-in__item">
+                                    <label class="fill-in__label" for="full_name">Nombre completo</label>
+                                    <input class="fill-in__input" id="full_name" type="text"
+                                    name="full_name" placeholder="Ej: Sally Jill" required/>
+                                </div>
+                                <div class="fill-in__item">
+                                    <label class="fill-in__label" for="job">Puesto</label>
+                                    <input class="fill-in__input" id="job" type="text" name="job"
+                                    placeholder="Ej: Front-end" />
+                                </div>
+                                <div class="fill-in__item">
+                                    <label class="fill-in__label" for="img-profile">Imagen de perfil</label>
+                                    <div class="fill-in__buttonImg-wrapper">
+                                        <input class="fill-in__button fill-in__buttonLabel" id="img-profile" type="button"
+                                        value="Añadir imagen" name="img-profile" />
+                                        <div class="img-profile__preview"></div>
+                                    </div>
+                                </div>
+                                <div class="fill-in__item">
+                                    <label class="fill-in__label" for="email">Email</label>
+                                    <input class="fill-in__input" id="email" type="email" name="email"
+                                    placeholder="Ej: sally-jill@gmail.com" />
+                                </div>
+                                <div class="fill-in__item">
+                                    <label class="fill-in__label" for="phone">Teléfono</label>
+                                    <input class="fill-in__input input__tel" id="phone" type="tel"
+                                    minlength="9" name="phone" placeholder="Ej: 555-55-55-55" />
+                                </div>
+                                <div class="fill-in__item">
+                                    <label class="fill-in__label" class="fill-in__label" for="linkedin">Linkedin</label>
+                                    <input class="fill-in__input" id="linkedin" type="text"
+                                    name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
+                                </div>
+                                <div class="fill-in__item">
+                                    <label class="fill-in__label" for="github">Github</label>
+                                    <input class="fill-in__input" id="github" type="text" name="github"
+                                    placeholder="Ej: sally-hill" />
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="share">
+                            <legend class="legend legend__distribution"> <i class="fas fa-share-alt legend__icon legend__icon--share"></i>
+
+                                 <h2 class="legend__title title__legend--grey">Comparte</h2>
+ <i class="fas fa-chevron-up legend__arrow"></i>
+
+                            </legend>
+                            <button class="share-button" type="button"> <i class="far fa-address-card"></i>
+Crear tarjeta</button>
+                            <section class="section__twitter">
+                                 <h3 class="title-twitter">La tarjeta ha sido creada:</h3>
+ <a class="twitter-link" href="#">https://awesome-profile-card.com?id=A456Dkhhñjkhjkbsad</a>
+
+                                <button
+                                class="button-twitter"> <i class="fab fa-twitter twitter-icon"></i>
+Compartir en Twitter</button>
+                            </section>
+                        </fieldset>
+                    </div>
                 </div>
             </form>
         </main>
@@ -197,7 +200,7 @@ Compartir en Twitter</button>
                 </ul>
             </div>
         </footer>
-        <script src="assets/js/main.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/js/main.js"></script>
     </body>
 
 </html>

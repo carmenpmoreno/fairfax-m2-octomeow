@@ -1,8 +1,10 @@
-<legend class="legend-test">
+<section class="preview-container">
+  <div class="button-container">
     <div class="reset-button">
-        <label for="reset" class="visually-hidden">Botón de borrar</label>
-        <i class="far fa-trash-alt"></i>
-        <input type="reset" id="reset" />
+      <label for="reset" class="visually-hidden">Botón de borrar</label>
+      <button class="reset--button" type="button" id="reset">
+        <i class="far fa-trash-alt"></i>Reset
+      </button>
     </div>
 </legend>
 <div class="card-preview default--palette">
@@ -14,9 +16,10 @@
         </div>
     </div>
     <div class="user--profile__pic">
-        <img src="https://via.placeholder.com/240x200" alt="foto de perfil">
+      <img src="assets/images/default-profile-pic.png" alt="foto de perfil" />
     </div>
     <div>
-        <partial src=_contact.html></partial>
+      <partial src="_contact.html"></partial>
     </div>
-</div>
+  </div>
+</section>

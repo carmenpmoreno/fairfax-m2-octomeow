@@ -1,10 +1,15 @@
 .share {
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
 }
 
 .legend__icon--share {
     margin-right: 12px;
+}
+
+.legend__arrow {
+    margin:0;
 }
 
 .share-button {
@@ -18,7 +23,9 @@
     border-radius: 12px;
     margin:30px auto;
     text-align: center;
-
+    &:active {
+        background-color: $color-greyLine; 
+    }
     &-pushed {
     background-color: $color-greyLine;
     }
@@ -65,3 +72,4 @@
     width: 18px;
     height: 18px;
 }
+
