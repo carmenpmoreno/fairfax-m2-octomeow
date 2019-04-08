@@ -1,6 +1,4 @@
-
 'use strict';
-
 
 console.log('>> Ready :)');
 
@@ -83,6 +81,22 @@ function writeCard () {
 
 inputEl.addEventListener('keyup', writeCard);
 
+//CAMPO JOB
+const jobEl = document.getElementById('job');
+const jobPreview = document.querySelector('.occupation');
+const defaultJob = "Profesión";
+jobPreview.innerHTML = defaultJob;
+
+function getJobValue(){
+   if (jobEl.value){
+       jobPreview.innerHTML = jobEl.value;
+   }else{
+       jobPreview.innerHTML = defaultJob;
+   }
+}
+
+jobEl.addEventListener('keyup', getJobValue);
+
 //Color select
 
 const cardPreviewEl = document.querySelector('.card-preview');
@@ -92,9 +106,16 @@ const palettePickerEl = document.querySelector('.option__container');
 const paletteIds =[];
 const paletteClasses = [];
 
+
+//LINKEDIN
+
+const linkedinPreview= document.querySelector('.link__linkedin');
+const linkedinInput= document.getElementById('linkedin');
+const linkedinDefaultText='https://www.linkedin.com';
+
 function writeLinkedin(){
     console.log('works');
-    linkedinPreview.href= 'https://www.'+ linkedinInput.value || linkedinDefaultText;
+    linkedinPreview.href= 'https://www.'+linkedinInput.value || linkedinDefaultText;
 };
 
 linkedinInput.addEventListener('change', writeLinkedin);
