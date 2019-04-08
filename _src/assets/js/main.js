@@ -118,7 +118,7 @@ formButton.addEventListener('click', changeButtonColor);
 
 //COLLAPSABLES
 
-const legendEl = document.querySelector('.legend__arrow');
+const legendArray = document.getElementsByClassName('legend');
 const designEl= document.querySelector('.options');
 const fillEl= document.querySelector('.fill-in__items');
 
@@ -126,14 +126,18 @@ function handlerClick (){
     console.log('eeeeee');
     if (designEl.classList.contains('collapsible__hidden')){
         designEl.classList.add('option__distribution');
-        designEl.classList.remove('collapsible__hidden')
-        ;
+        designEl.classList.remove('collapsible__hidden');
+        fillEl.classList.remove('collapsible__hidden');
+
+        // para que solo uno se habrá se pone un id diferente a los legend, y le dices this.legend...sea diferente != al legend.id les quitas la clase que no les corresponda (abrirlo)
+
     }
     else {
         designEl.classList.add('collapsible__hidden'),
         designEl.classList.remove('option__distribution');
     }
+
 }
-
-
-legendEl.addEventListener('click', handlerClick);
+for(let i=0; i< legendArray.length; i++){
+    legendArray[i].addEventListener('click', handlerClick);
+}
