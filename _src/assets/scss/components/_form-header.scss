@@ -32,8 +32,11 @@ fieldset {
             padding: 13px 0;  
             margin-left: auto;              
             color: $color-greyMouse;
-            transform: rotate(180deg);
         }
     
     }
+}
+
+.collapsible1, .collapsible2, .collapsible3 {
+    display: none;
 }
