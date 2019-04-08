@@ -184,7 +184,7 @@ const defaultLink = 'https://github.com/';
 addLink.href = defaultLink;
 
 function addMyLink() {
-    addLink.href = inputLink.value || defaultLink;
+    addLink.href = defaultLink + inputLink.value || defaultLink;
 }
 inputLink.addEventListener('keyup', addMyLink);
 
