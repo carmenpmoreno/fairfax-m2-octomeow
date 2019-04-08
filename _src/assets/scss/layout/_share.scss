@@ -30,23 +30,17 @@
     text-align: center;
     &:active {
         background-color: $color-greyLine; 
-<<<<<<< HEAD
     }
+
     &-pushed {
     background-color: $color-greyLine;
-=======
->>>>>>> collapsibles-total
     }
 }
 .section__twitter {
     width: 100%;
     text-align: center;
-<<<<<<< HEAD
     padding: 20px 20px 30px 20px;
     margin: auto;
-=======
-    padding: 20px 0 30px;
->>>>>>> collapsibles-total
     border-top: 1px solid $color-greyLine;
     border-bottom: 1px solid $color-greyLine;
 }
@@ -84,10 +78,3 @@
     width: 18px;
     height: 18px;
 }
-
-<<<<<<< HEAD
-=======
-.share__container {
-    display: flex;
-}
->>>>>>> collapsibles-total
