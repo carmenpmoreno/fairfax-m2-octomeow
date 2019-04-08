@@ -68,46 +68,12 @@ legendTwoEl.addEventListener('click', legendTwoClickHandler);
 legendThreeEl.addEventListener('click', legendThreeClickHandler);
 
 
-// COLORES
-
-const colorCardGreenEl = document.querySelector('.color-item--green');
-const colorCardRedEl =  document.querySelector('.color-item--red');
-const colorCardGreyEl = document.querySelector('.color-item--grey');
-const cardHeaderEl = document.querySelector('.card--header');
-
-function greenClickHandler() {
-    console.log('Green listener works');
-    cardHeaderEl.classList.remove('card--header--red');
-    cardHeaderEl.classList.remove('card--header--grey');
-    cardHeaderEl.classList.add('card--header--green');
-}
-
-function redClickHandler() {
-    console.log('Red listener works');
-    cardHeaderEl.classList.remove('card--header--green');
-    cardHeaderEl.classList.remove('card--header--grey');
-    cardHeaderEl.classList.add('card--header--red');
-}
-
-function greyClickHandler() {
-    console.log('Grey listener works');
-    cardHeaderEl.classList.remove('card--header--red');
-    cardHeaderEl.classList.remove('card--header--green');
-    cardHeaderEl.classList.add('card--header--grey');
-}
-
-
-colorCardGreenEl.addEventListener('click', greenClickHandler);
-colorCardRedEl.addEventListener('click', redClickHandler);
-colorCardGreyEl.addEventListener('click', greyClickHandler);
-
-
-
 // NOMBRE
 
 const inputEl = document.querySelector('.fill-in__input');
 const inputDefaultText = "Nombre de prueba";
 const nameCardEl = document.querySelector('.full-name');
+
 
 function writeCard () {
     console.log('Listener is working');
@@ -117,57 +83,14 @@ function writeCard () {
 
 inputEl.addEventListener('keyup', writeCard);
 
-//CAMPO JOB
-const jobEl = document.getElementById('job');
-const jobPreview = document.querySelector('.occupation');
-const defaultJob = "Profesión";
-jobPreview.innerHTML = defaultJob;
+//Color select
 
-function getJobValue(){
-    if (jobEl.value){
-        jobPreview.innerHTML = jobEl.value;
-    }else{
-        jobPreview.innerHTML = defaultJob;
-    }
-}
-
-jobEl.addEventListener('keyup', getJobValue);
+const cardPreviewEl = document.querySelector('.card-preview');
+const palettePickerEl = document.querySelector('.option__container');
 
 
-//TELEPHONE
-const inputTelEl =  document.querySelector('.input__tel');
-const iconMobEl = document.querySelector('.icon__link--mobile');
-
-function insertHref () {
-    console.log('Start insertHref');
-    const inputTelText = inputTelEl.value;
-    iconMobEl.href = `tel:${inputTelText}`;
-    iconMobEl.title = `${inputTelText}`;
-}
-
-inputTelEl.addEventListener('change', insertHref);
-
-// EMAIL
-
-const previewLink = document.querySelector('.email');
-const emailInput = document.getElementById('email');
-
-function insertEmailOnPreview () {
-    if (emailInput.value) {
-        previewLink.href = `mailto:${emailInput.value}`;
-    }
-    else {
-        previewLink.href = '';
-    }
-};
-
-emailInput.addEventListener('keyup', insertEmailOnPreview);
-
-//LINKEDIN
-
-const linkedinPreview= document.querySelector('.link__linkedin');
-const linkedinInput= document.getElementById('linkedin');
-const linkedinDefaultText='https://www.linkedin.com';
+const paletteIds =[];
+const paletteClasses = [];
 
 function writeLinkedin(){
     console.log('works');
@@ -209,3 +132,30 @@ function handlerSubmitButton(event){
 // añadir cambio de color en los iconos cuando su input está vacia
 
 formButton.addEventListener('click', handlerSubmitButton);
+for (let i=1; i<=3; i++){
+    paletteIds.push(palettePickerEl.querySelector(`#p${i}`));
+    paletteClasses.push(palettePickerEl.querySelector(`.palette--${i}`).className); 
+};
+console.log(paletteIds);
+console.log(paletteClasses);
+
+for (let i=0; i<=2; i++){
+
+    function changeColor(event){
+        //Uso current target para saber qué paleta está seleccionada
+        const selectedItem = (event.currentTarget);
+        //busco en qué posición está colocado en el array 
+        const selectedItemIndex =paletteIds.indexOf(selectedItem);
+        //añado la clase que esté en esa misma posición 
+        const selectedClass = paletteClasses[selectedItemIndex];
+        console.log(selectedClass);
+        cardPreviewEl.classList.remove('default--palette');
+        //Elimino todas las posibles clases que pudiera haber seleccionado antes
+        for(let i = 0; i<=2; i++){
+            cardPreviewEl.classList.remove(`${paletteClasses[i]}`);
+        };
+        cardPreviewEl.classList.add(`${selectedClass}`);
+    };
+
+paletteIds[i].addEventListener('click', changeColor);
+}
