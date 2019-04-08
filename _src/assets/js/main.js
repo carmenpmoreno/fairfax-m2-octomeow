@@ -79,7 +79,7 @@ const linkedinDefaultText='https://www.linkedin.com';
 
 function writeLinkedin(){
     console.log('works');
-    linkedinPreview.href= linkedinInput.value || linkedinDefaultText;
+    linkedinPreview.href= 'https://www.'+linkedinInput.value || linkedinDefaultText;
 };
 
 linkedinInput.addEventListener('change', writeLinkedin);
@@ -114,3 +114,23 @@ function changeButtonColor(event){
 // añadir cambio de color en los iconos cuando su input está vacia
 
 formButton.addEventListener('click', changeButtonColor);
+
+
+//COLLAPSABLES
+
+const legendEl = document.querySelector('.legend__arrow');
+const designEl= document.querySelector('.option__distribution');
+const fillEl= document.querySelector('.fill-in__items');
+
+function handlerClick (){
+    console.log('eeeeee');
+    if (designEl.classList.contains('collapsible__hidden')){
+        designEl.classList.remove('collapsible__hidden');
+    }
+    else {
+        designEl.classList.add('collapsible__hidden');
+    }
+}
+
+
+legendEl.addEventListener('click', handlerClick);
