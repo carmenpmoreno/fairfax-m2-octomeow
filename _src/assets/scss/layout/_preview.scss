@@ -179,6 +179,7 @@
 }  
 .button-container{
     display:flex;
+    flex-direction: column;
     width:240px;
     .reset--button{
         text-transform: uppercase;
