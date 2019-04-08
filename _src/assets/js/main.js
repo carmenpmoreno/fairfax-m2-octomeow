@@ -119,16 +119,19 @@ formButton.addEventListener('click', changeButtonColor);
 //COLLAPSABLES
 
 const legendEl = document.querySelector('.legend__arrow');
-const designEl= document.querySelector('.option__distribution');
+const designEl= document.querySelector('.options');
 const fillEl= document.querySelector('.fill-in__items');
 
 function handlerClick (){
     console.log('eeeeee');
     if (designEl.classList.contains('collapsible__hidden')){
-        designEl.classList.remove('collapsible__hidden');
+        designEl.classList.add('option__distribution');
+        designEl.classList.remove('collapsible__hidden')
+        ;
     }
     else {
-        designEl.classList.add('collapsible__hidden');
+        designEl.classList.add('collapsible__hidden'),
+        designEl.classList.remove('option__distribution');
     }
 }
 
