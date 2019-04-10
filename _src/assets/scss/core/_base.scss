@@ -59,6 +59,12 @@ body {
     }
 }
 
+@media all and (min-width: 1024px) {
+    .main-container {
+        max-width: 1024px;
+    }
+}
+
 .collapsible__hidden {
     display: none;
 }
