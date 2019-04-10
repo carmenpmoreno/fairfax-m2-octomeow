@@ -25,6 +25,7 @@
       "_src/assets/js/preview-linkedin.js",
       "_src/assets/js/preview-name.js",
       "_src/assets/js/preview-tel.js",
+      "_src/assets/js/reset-button.js",
       "_src/assets/js/share.js"    
 		],
 		"dest": "public/assets/js/",
