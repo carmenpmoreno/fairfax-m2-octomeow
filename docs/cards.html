@@ -31,101 +31,107 @@
                                     <label for="reset" class="visually-hidden">Botón de borrar</label>
                                     <button class="reset--button" type="button" id="reset"> <i class="far fa-trash-alt"></i>Reset</button>
                                 </div>
-                            </div>
-                            <div class="card-preview">
-                                <div class="card--header">
-                                    <div class="sidebar"></div>
-                                    <div class="main--data">
-                                        <p class="full-name"></p>
-                                        <p class="occupation"></p>
+                                </legend>
+                                <div class="card-preview default--palette">
+                                    <div class="card--header">
+                                        <div class="sidebar bg__light"></div>
+                                        <div class="main--data">
+                                            <p class="full-name txt__dark">Nombre de prueba</p>
+                                            <p class="occupation txt__medium"></p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="user--profile__pic">
-                                    <img src="assets/images/default-profile-pic.png" alt="foto de perfil"
-                                    />
-                                </div>
-                                <div>
-                                    <div class="contact__link">
-                                        <ul class="contact__list">
-                                            <li class="contact__list--rrss pad--mobile"> <a href="" class="icon__link--mobile" title="" id="linkMobile">
+                                    <div class="user--profile__pic">
+                                        <img src="assets/images/default-profile-pic.png" alt="foto de perfil"
+                                        />
+                                    </div>
+                                    <div>
+                                        <div class="contact__link">
+                                            <ul class="contact__list">
+                                                <li class="contact__list--rrss pad--mobile border__medium"> <a href="" class="icon__link--mobile txt__dark" title="" id="linkMobile">
                 <i class="contact__list--icon fas fa-mobile-alt"></i>
             </a>
 
-                                            </li>
-                                            <li class="contact__list--rrss"> <a class="email" href="">
+                                                </li>
+                                                <li class="contact__list--rrss border__medium"> <a class="email txt__dark" href="">
                 <i class="contact__list--icon far fa-envelope"></i>
             </a>
 
-                                            </li>
-                                            <li class="contact__list--rrss"> <a href="#" id="linkEdin" class=link__linkedin>
+                                                </li>
+                                                <li class="contact__list--rrss border__medium"> <a href="#" id="linkEdin" class="link__linkedin txt__dark">
 
                 <i class="contact__list--icon fab fa-linkedin-in"></i>
             </a>
 
-                                            </li>
-                                            <li class="contact__list--rrss"> <a href="" id="linkGithub">
+                                                </li>
+                                                <li class="contact__list--rrss border__medium"> <a href="" id="linkGithub" class="txt__dark">
                 <i class="contact__list--icon fab fa-github-alt"></i>
             </a>
 
-                                            </li>
-                                        </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                         </section>
                     </fieldset>
                     <div class="collapsible__container">
                         <fieldset class="design">
-                            <legend class="legend legend__distribution"> <i class="far fa-object-ungroup fa-lg legend__icon"></i>
+                            <legend class="legend legend__distribution legend1"> <i class="far fa-object-ungroup fa-lg legend__icon"></i>
 
                                  <h2 class="legend__title title__legend--grey">Diseña</h2>
- <i class="fas fa-chevron-up legend__arrow"></i>
+ <i class="fas fa-chevron-down legend__arrow arrow1"></i>
 
                             </legend>
-                            <label class="option__distribution" for="colors">
+                            <label class="collapsible1" for="colors">
                                 <p class="option__title subtitle__legend--grey">Colores</p>
                                 <div class="option__container">
                                     <label class="color__container">
                                         <div class="color-item radio__container">
                                             <input class="radio" type="radio" id="colors" name="colors" value="green"
-                                            /> <span class="checkmark"></span>
+                                            /> <span class="checkmark" id="p1"></span>
 
                                         </div>
-                                        <div class="color-item green--1"></div>
-                                        <div class="color-item green--2"></div>
-                                        <div class="color-item green--3"></div>
+                                        <div class="palette--1">
+                                            <div class="color-item bg__dark"></div>
+                                            <div class="color-item bg__medium"></div>
+                                            <div class="color-item bg__light"></div>
+                                        </div>
                                     </label>
                                     <label class="color__container">
                                         <div class="color-item radio__container">
                                             <input class="radio" type="radio" id="colors" name="colors" value="green"
-                                            /> <span class="checkmark"></span>
+                                            /> <span class="checkmark" id="p2"></span>
 
                                         </div>
-                                        <div class="color-item red--1"></div>
-                                        <div class="color-item red--2"></div>
-                                        <div class="color-item red--3"></div>
+                                        <div class="palette--2">
+                                            <div class="color-item bg__dark"></div>
+                                            <div class="color-item bg__medium"></div>
+                                            <div class="color-item bg__light"></div>
+                                        </div>
                                     </label>
                                     <label class="color__container">
                                         <div class="color-item radio__container">
                                             <input class="radio" type="radio" id="colors" name="colors" value="green"
-                                            /> <span class="checkmark"></span>
+                                            /> <span class="checkmark" id="p3"></span>
 
                                         </div>
-                                        <div class="color-item grey--1"></div>
-                                        <div class="color-item grey--2"></div>
-                                        <div class="color-item grey--3"></div>
+                                        <div class="palette--3">
+                                            <div class="color-item bg__dark"></div>
+                                            <div class="color-item bg__medium"></div>
+                                            <div class="color-item bg__light"></div>
+                                        </div>
                                     </label>
                                 </div>
                             </label>
                         </fieldset>
                         <fieldset class="fill-in">
-                            <legend class="legend legend__distribution"> <i class="far fa-keyboard legend__icon"></i>
+                            <legend class="legend legend__distribution legend2"> <i class="far fa-keyboard legend__icon"></i>
 
                                  <h2 class="legend__title title__legend--grey">Rellena</h2>
- <i class="fas fa-chevron-up legend__arrow"></i>
+ <i class="fas fa-chevron-down legend__arrow arrow2"></i>
 
                             </legend>
-                            <div class="fill-in__items">
+                            <div class="collapsible2">
                                 <div class="fill-in__item">
                                     <label class="fill-in__label" for="full_name">Nombre completo</label>
                                     <input class="fill-in__input" id="full_name" type="text"
@@ -167,25 +173,27 @@
                             </div>
                         </fieldset>
                         <fieldset class="share">
-                            <legend class="legend legend__distribution"> <i class="fas fa-share-alt legend__icon legend__icon--share"></i>
+                            <legend class="legend legend__distribution legend3"> <i class="fas fa-share-alt legend__icon legend__icon--share"></i>
 
                                  <h2 class="legend__title title__legend--grey">Comparte</h2>
- <i class="fas fa-chevron-up legend__arrow"></i>
+ <i class="fas fa-chevron-down legend__arrow arrow3"></i>
 
                             </legend>
-                            <button class="share-button" type="button"> <i class="far fa-address-card"></i>
+                            <div class="collapsible3">
+                                <button class="share-button" type="button"> <i class="far fa-address-card"></i>
 Crear tarjeta</button>
-                            <section class="section__twitter">
-                                 <h3 class="title-twitter">La tarjeta ha sido creada:</h3>
+                                <section class="section__twitter collapsible__hidden">
+                                     <h3 class="title-twitter">La tarjeta ha sido creada:</h3>
  <a class="twitter-link" href="#">https://awesome-profile-card.com?id=A456Dkhhñjkhjkbsad</a>
 
-                                <button
-                                class="button-twitter"> <i class="fab fa-twitter twitter-icon"></i>
+                                    <button
+                                    class="button-twitter"> <i class="fab fa-twitter twitter-icon"></i>
 Compartir en Twitter</button>
-                            </section>
+                                </section>
+                            </div>
                         </fieldset>
                     </div>
-                </div>
+                    </div>
             </form>
         </main>
         <footer class="main-footer">

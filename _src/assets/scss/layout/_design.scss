@@ -63,42 +63,78 @@
         border-radius: 50%;
         background: white;
     }
- 
-    .green--1 {
-        background-color: #114e4e;
+.palette--1{
+        display:flex;
+        .bg__dark{
+            background-color: $color-blueCoal;
+        }
+        .txt__dark{
+            color:$color-blueCoal;
+        }
+        .bg__medium{
+            background-color:$color-blueSky;
+        }
+        .txt__medium{
+            color:$color-blueSky;
+        }
+        .border__medium{
+            border: 1px solid $color-blueSky;
+        }
+        .bg__light{
+            background-color: $color-paleGrey;
+        }
+        .txt__light{
+            color:$color-paleGrey;
+        }
     }
-
-    .green--2 {
-        background-color: #438792;
+    .palette--2{
+        display: flex;
+        .bg__dark{
+            background-color: $color-redBlood;
+        }
+        .txt__dark{
+            color:$color-redBlood;
+        }
+        .bg__medium{
+            background-color:$color-redSign;
+        }
+        .txt__medium{
+            color:$color-redSign;
+        }
+        .border__medium{
+            border: 1px solid $color-redSign;
+        }
+        .bg__light{
+            background-color: $color-orangeValencia;
+        }
+        .txt__light{
+            color:$color-orangeValencia;
+        }
     }
-
-    .green--3 {
-        background-color: #a2deaf;
-    }
-
-    .red--1 {
-        background-color: #420101;
-    }
-
-    .red--2 {
-        background-color: #bd1010;
-    }
-
-    .red--3 {
-        background-color: #e95626;
-    }
-
-    .grey--1 {
-        background-color: #3e5b65;
-    }
-
-    .grey--2 {
-        background-color: #dfe5eb;
-    }
-
-    .grey--3 {
-        background-color: #a0c0cf;
-    }
+    .palette--3{
+        display: flex;
+        .bg__dark{
+            background-color: $color-greyRain;
+        }
+        .txt__dark{
+            color:$color-greyRain;
+        }
+        .bg__medium{
+            background-color:$color-greyMedium;
+        }
+        .txt__medium{
+            color:$color-greyMedium;
+        }
+        .border__medium{
+            border: 1px solid $color-greyMedium;
+        }
+        .bg__light{
+            background-color: $color-greyBright;
+        }
+        .txt__light{
+            color:$color-greyBright;
+        }
+    }  
 }
 
 .option__distribution {
