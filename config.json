@@ -17,7 +17,15 @@
 	},
 	"js": {
 		"src": [
-			"_src/assets/js/main.js"
+      "_src/assets/js/main.js",
+      "_src/assets/js/collapsibles.js",
+      "_src/assets/js/preview-colors.js",
+      "_src/assets/js/preview-github.js",
+      "_src/assets/js/preview-job.js",
+      "_src/assets/js/preview-linkedin.js",
+      "_src/assets/js/preview-name.js",
+      "_src/assets/js/preview-tel.js",
+      "_src/assets/js/share.js"    
 		],
 		"dest": "public/assets/js/",
     "dist": "docs/assets/js/"
