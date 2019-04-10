@@ -3,12 +3,12 @@
     display: flex;
     justify-content: center;
 
-    .collapsible__container{
+    .form__content{
         width:100%;
         padding:0 20px;
     }
 
-    .preview {
+    .form__preview {
         min-height: 300px;
         min-width: 320px;
         background: linear-gradient($color-silverBlue, $color-paleGrey);
@@ -23,15 +23,14 @@
             padding: 30px;
         }
 
-        .preview {            
+        .form__preview {            
             margin: 23px 40px 21px 0;
             border-radius: 6px;
         }
 
-        .collapsible__container {
+        .form__content {
             flex-basis: 50%;
             max-width: 379px;
-
         }
     }
 
@@ -39,18 +38,13 @@
         display: flex;
         flex-direction: row-reverse;
 
-        .preview {
+        .form__preview {
             flex-grow: 1;
             margin-left: 20px;
         }
-
-        // .collapsible__container {
-        //     flex-basis: 329px;
-        //     margin-right: 10px;
-        // }
     }
 }
 
-.design, .fill-in, .share {
+.form__design, .form__fill-in, .form__share {
     border:  none;
 }
