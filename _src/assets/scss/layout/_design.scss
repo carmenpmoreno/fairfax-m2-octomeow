@@ -1,24 +1,22 @@
-
-
 .color__container {
-  width: 120px;
-  height: 25px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  margin-bottom: 20px;
+    width: 120px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
 
     .color-item {
-    width: 30px;
-    height: 100%;
+        width: 30px;
+        height: 100%;
     }
 
     .radio__container {
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
     /* Hide the browser's default radio button */
@@ -26,7 +24,7 @@
         opacity: 0;
         cursor: pointer;
     }
-    
+
     .checkmark {
         display: block;
         width: 17px;
@@ -36,24 +34,24 @@
         border-radius: 50%;
         transform: translate(7px, -14px);
     }
-  
+
     /* When the radio button is checked, add a blue background */
-    .radio__container input:checked ~ .checkmark {
-    background-color: #2196F3;
+    .radio__container input:checked~.checkmark {
+        background-color: #2196F3;
     }
-  
+
     /* Create the indicator (the dot/circle - hidden when not checked) */
     .checkmark:after {
         content: "";
         position: absolute;
         display: none;
     }
-  
+
     /* Show the indicator (dot/circle) when checked */
-    .radio__container input:checked ~ .checkmark:after {
+    .radio__container input:checked~.checkmark:after {
         display: block;
     }
-  
+
     /* Style the indicator (dot/circle) */
     .radio__container .checkmark:after {
         top: 6px;
@@ -63,96 +61,119 @@
         border-radius: 50%;
         background: white;
     }
-.palette--1{
-        display:flex;
-        .bg__dark{
+
+    .palette--1 {
+        display: flex;
+
+        .bg__dark {
             background-color: $color-blueCoal;
         }
-        .txt__dark{
-            color:$color-blueCoal;
+
+        .txt__dark {
+            color: $color-blueCoal;
         }
-        .bg__medium{
-            background-color:$color-blueSky;
+
+        .bg__medium {
+            background-color: $color-blueSky;
         }
-        .txt__medium{
-            color:$color-blueSky;
+
+        .txt__medium {
+            color: $color-blueSky;
         }
-        .border__medium{
+
+        .border__medium {
             border: 1px solid $color-blueSky;
         }
-        .bg__light{
+
+        .bg__light {
             background-color: $color-paleGrey;
         }
-        .txt__light{
-            color:$color-paleGrey;
+
+        .txt__light {
+            color: $color-paleGrey;
         }
     }
-    .palette--2{
+
+    .palette--2 {
         display: flex;
-        .bg__dark{
+
+        .bg__dark {
             background-color: $color-redBlood;
         }
-        .txt__dark{
-            color:$color-redBlood;
+
+        .txt__dark {
+            color: $color-redBlood;
         }
-        .bg__medium{
-            background-color:$color-redSign;
+
+        .bg__medium {
+            background-color: $color-redSign;
         }
-        .txt__medium{
-            color:$color-redSign;
+
+        .txt__medium {
+            color: $color-redSign;
         }
-        .border__medium{
+
+        .border__medium {
             border: 1px solid $color-redSign;
         }
-        .bg__light{
+
+        .bg__light {
             background-color: $color-orangeValencia;
         }
-        .txt__light{
-            color:$color-orangeValencia;
+
+        .txt__light {
+            color: $color-orangeValencia;
         }
     }
-    .palette--3{
+
+    .palette--3 {
         display: flex;
-        .bg__dark{
+
+        .bg__dark {
             background-color: $color-greyRain;
         }
-        .txt__dark{
-            color:$color-greyRain;
+
+        .txt__dark {
+            color: $color-greyRain;
         }
-        .bg__medium{
-            background-color:$color-greyMedium;
+
+        .bg__medium {
+            background-color: $color-greyMedium;
         }
-        .txt__medium{
-            color:$color-greyMedium;
+
+        .txt__medium {
+            color: $color-greyMedium;
         }
-        .border__medium{
+
+        .border__medium {
             border: 1px solid $color-greyMedium;
         }
-        .bg__light{
+
+        .bg__light {
             background-color: $color-greyBright;
         }
-        .txt__light{
-            color:$color-greyBright;
+
+        .txt__light {
+            color: $color-greyBright;
         }
-    }  
+    }
 }
 
 .option__distribution {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-bottom: 1px solid $color-greyLine;
-
-  .option__container {
-    width: 120px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    padding-top: 13px;
-  }
+    justify-content: space-between;
+    border-bottom: 1px solid $color-greyLine;
 
-  .option__title {
-    padding: 13px 0 0 19px;
-  }
+    .option__container {
+        width: 120px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 13px;
+    }
+
+    .option__title {
+        padding: 13px 0 0 19px;
+    }
 }
-
