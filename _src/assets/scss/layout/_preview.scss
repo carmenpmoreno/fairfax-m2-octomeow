@@ -116,11 +116,6 @@
     }
 }
 
-.user--profile__pic {
-    img {
-        display: block;
-    }
-}
 
 .palette--1 {
     .bg__dark {
@@ -220,4 +215,27 @@
     .reset--button {
         text-transform: uppercase;
     }
+}
+
+.profile__image,
+.profile__preview {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ccc;
+}
+
+.profile__image {
+    width: 240px;
+    height: 200px;
+}
+  
+.profile__preview {
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+}
+
+.user--profile__pic {
+    background-image: '../images/default-profile-pic.png';
 }
