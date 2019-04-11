@@ -116,11 +116,6 @@
     }
 }
 
-.user--profile__pic {
-    img {
-        display: block;
-    }
-}
 
 .palette--1 {
     .bg__dark {
@@ -225,7 +220,7 @@
 .profile__image,
 .profile__preview {
   background-position: center;
-  backround-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid #ccc;
 }
@@ -239,4 +234,8 @@
     width: 50px;
     height: 50px;
     margin-left: 15px;
+}
+
+.user--profile__pic {
+    background-image: '../images/default-profile-pic.png';
 }
