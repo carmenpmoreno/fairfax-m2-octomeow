@@ -1,11 +1,11 @@
 .form {
 
-    .collapsible__container {
-        width: 100%;
-        padding: 0 20px;
+    .form__content{
+        width:100%;
+        padding:0 20px;
     }
 
-    .preview {
+    .form__preview {
         min-height: 300px;
         background: linear-gradient($color-silverBlue, $color-paleGrey);
     }
@@ -21,15 +21,24 @@
             justify-content: space-between;
         }
 
+<<<<<<< HEAD
+        .form__preview {            
+            margin: 23px 40px 21px 0;
+=======
         .preview {
+>>>>>>> dev
             border-radius: 6px;
             width: 500px;
             margin-right: 20px;
         }
 
-        .collapsible__container {
+        .form__content {
             flex-basis: 50%;
+<<<<<<< HEAD
+            max-width: 379px;
+=======
             max-width: 350px;            
+>>>>>>> dev
         }
     }
 
@@ -38,6 +47,17 @@
             max-width: 1024px;
         }
 
+<<<<<<< HEAD
+        .form__preview {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+    }
+}
+
+.form__design, .form__fill-in, .form__share {
+    border:  none;
+=======
         .preview {
             width: 800px;
             margin: 0;
@@ -52,4 +72,5 @@
 
 .design, .fill-in, .share {
     border: none;
+>>>>>>> dev
 }
