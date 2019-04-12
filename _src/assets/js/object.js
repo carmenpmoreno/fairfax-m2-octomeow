@@ -1,3 +1,6 @@
+console.log('Hola');
+
+
 let card = {
     name: 'Nombre y apellido',
     job: 'Trabajo',
@@ -11,4 +14,3 @@ let card = {
 
 const inputUpdateEls = document.querySelectorAll('.input-update');
 console.log(inputUpdateEls);
-console.log('Mi abuela');
