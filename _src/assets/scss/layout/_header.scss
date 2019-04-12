@@ -1,21 +1,16 @@
-.header--container {
-    width: 100%;
-    height: 111px;
-    overflow-x: hidden;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.header--container{
+    width:100%;
+    height:111px;
+    overflow-x:hidden;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
 }
 
-.logo {
-    width: 201px;
-    height: 50px;
-
-    @media all and(min-width: 768px) {
-        margin-left: 20px;
-    }
-
-    @media all and(min-width:1024px) {
-        margin: 0;
+.logo{
+    width:201px;
+    height:50px; 
+    @media all and(min-width:768px){
+        margin-left:40px;
     }
 }

@@ -11,29 +11,33 @@ fieldset {
     padding: 0;
     margin: 0;
     min-width: 320px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
 
-    .legend__icon {
-        padding: 13px 0;
-        margin-right: 10px;
-        color: $color-orangeButane;
-    }
+    &__distribution {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
 
-    .legend__title {
-        text-align: left;
-    }
+        .legend__icon {
+            padding: 13px 0;
+            margin-right: 10px;
+            color: $color-orangeButane;
+        }
 
-    .legend__arrow {
-        padding: 13px 0;  
-        margin-left: auto;              
-        color: $color-greyMouse;
+        .legend__title {
+            text-align: left;
+        }
+
+        .legend__arrow {
+            padding: 13px 0;  
+            margin-left: auto;              
+            color: $color-greyMouse;
+        }
+    
     }
 }
 
-.collapsible {
+.collapsible1, .collapsible2, .collapsible3 {
     display: none;
 }
