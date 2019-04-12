@@ -1,6 +1,5 @@
 console.log('Hola');
 
-
 let card = {
     name: 'Nombre y apellido',
     job: 'Trabajo',
@@ -29,3 +28,9 @@ function inputChangeHandler(event) {
 for (let i = 0; i < inputUpdateEls.length; i++) {
     inputUpdateEls[i].addEventListener('change', inputChangeHandler);
 }
+
+function finalFormHandler() {
+    
+}
+
+formButton.addEventListener('click', finalFormHandler);
