@@ -14,3 +14,18 @@ let card = {
 
 const inputUpdateEls = document.querySelectorAll('.input-update');
 console.log(inputUpdateEls);
+
+function cardUpdate(name, value) {
+    card[name] = value;
+}
+
+function inputChangeHandler(event) {
+    const currentInput = event.currentTarget;
+    const name = currentInput.name;
+    const value = currentInput.value;
+    cardUpdate(name, value);
+}
+
+for (let i = 0; i < inputUpdateEls.length; i++) {
+    inputUpdateEls[i].addEventListener('change', inputChangeHandler);
+}
