@@ -3,7 +3,7 @@
 // Recoger la clase "legend" con QuerySelectoAll
 const legends = document.querySelectorAll('.legend');
 // Recogemos la clase homónima "collapsible"
-const collapsibles = document.querySelectorAll('collapible');
+const collapsibles = document.querySelectorAll('collapsibles');
 
 // listener sobre el legend
 for (const legend of legends) {
@@ -11,14 +11,23 @@ for (const legend of legends) {
 }
 
 // hacer un handler para que al hacer click en el legend "x" nos muestre su clase collapsible, pero ocultando la de los demás legend
-    function handlebuttonclick() {
+    function handlebuttonclick(event) {
         console.log('hola');
-    // dentro de él, hacer un bucle que nos recorra el array de los legend y ¿tal vez el de los collapsibles?
-    // for (let i=0; i<3; i++ ) {
-    //     console.log('hola');
-    // }
-    // si se hace click en un legend
-    // se muestra un collapsible
+        // si se abre un contenedor, se añade una clase con la flecha invertida
+
+        // y se cierran los otros contenedores si estaban abiertos
+
+
+        // si está cerrado, se abre y si está abierto, se cierra
+        if (event.currentTarget.classList.contains('closed')) {
+            event.currentTarget.nextElementSibling.classList.remove('hidden');
+            event.currentTarget.classList.remove('closed');
+        }
+        else {
+            event.currentTarget.nextElementSibling.classList.add('hidden');
+            event.currentTarget.classList.add('closed');
+        }
+        
     }
 
 
