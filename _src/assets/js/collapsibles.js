@@ -1,58 +1,25 @@
 // COLLAPSIBLES
 
-const legendOneEl = document.querySelector('.legend1');
-const legendTwoEl = document.querySelector('.legend2');
-const legendThreeEl = document.querySelector('.legend3');
-const collapsibleOneEl = document.querySelector('.collapsible1');
-const collapsibleTwoEl = document.querySelector('.collapsible2');
-const collapsibleThreeEl = document.querySelector('.collapsible3');
-const arrowOneEl = document.querySelector('.arrow1');
-const arrowTwoEl = document.querySelector('.arrow2');
-const arrowThreeEl = document.querySelector('.arrow3');
+// Recoger la clase "legend" con QuerySelectoAll
+const legends = document.querySelectorAll('.legend');
+// Recogemos la clase homónima "collapsible"
+const collapsibles = document.querySelectorAll('collapible');
 
-function legendOneClickHandler() {
-    console.log('Listener 1 works');
-    collapsibleTwoEl.classList.remove('fill-in__items');
-    collapsibleThreeEl.classList.remove('share__container');
-    arrowTwoEl.classList.remove('fa-chevron-up');
-    arrowThreeEl.classList.remove('fa-chevron-up');
-    collapsibleOneEl.classList.toggle('option__distribution');
-    if (collapsibleOneEl.classList.contains('option__distribution')) {
-        arrowOneEl.classList.add('fa-chevron-up');
-    } else {
-        arrowOneEl.classList.remove('fa-chevron-up');
-    };
+// listener sobre el legend
+for (const legend of legends) {
+    legend.addEventListener('click', handlebuttonclick);
 }
 
-function legendTwoClickHandler() {
-    console.log('Listener 2 works');
-    collapsibleOneEl.classList.remove('option__distribution');
-    collapsibleThreeEl.classList.remove('share__container');
-    arrowOneEl.classList.remove('fa-chevron-up');
-    arrowThreeEl.classList.remove('fa-chevron-up');
-    collapsibleTwoEl.classList.toggle('fill-in__items');
-    if (collapsibleTwoEl.classList.contains('fill-in__items')) {
-        arrowTwoEl.classList.add('fa-chevron-up');
-    } else {
-        arrowTwoEl.classList.remove('fa-chevron-up');
-    };
-}
+// hacer un handler para que al hacer click en el legend "x" nos muestre su clase collapsible, pero ocultando la de los demás legend
+    function handlebuttonclick() {
+        console.log('hola');
+    // dentro de él, hacer un bucle que nos recorra el array de los legend y ¿tal vez el de los collapsibles?
+    // for (let i=0; i<3; i++ ) {
+    //     console.log('hola');
+    // }
+    // si se hace click en un legend
+    // se muestra un collapsible
+    }
 
-function legendThreeClickHandler() {
-    console.log('Listener 3 works');
-    collapsibleOneEl.classList.remove('option__distribution');
-    collapsibleTwoEl.classList.remove('fill-in__items');
-    arrowOneEl.classList.remove('fa-chevron-up');
-    arrowTwoEl.classList.remove('fa-chevron-up');
-    collapsibleThreeEl.classList.toggle('share__container');
-    if (collapsibleThreeEl.classList.contains('share__container')) {
-        arrowThreeEl.classList.add('fa-chevron-up');
-    } else {
-        arrowThreeEl.classList.remove('fa-chevron-up');
-    };
-}
 
-legendOneEl.addEventListener('click', legendOneClickHandler);
-legendTwoEl.addEventListener('click', legendTwoClickHandler);
-legendThreeEl.addEventListener('click', legendThreeClickHandler);
 
