@@ -22,6 +22,7 @@ for (const legend of legends) {
         if (event.currentTarget.classList.contains('closed')) {
             event.currentTarget.nextElementSibling.classList.remove('hidden');
             event.currentTarget.classList.remove('closed');
+            event.currentTarget.classList.add('open-arrow ');
         }
         else {
             event.currentTarget.nextElementSibling.classList.add('hidden');

@@ -1,3 +1,9 @@
 .hidden {
     display: none;
 }
+.closed {
+}
+.open-arrow {
+    & fas fa-chevron-up  {
+    }
+}
