@@ -14,23 +14,24 @@ for (const legend of legends) {
     function handlebuttonclick(event) {
         console.log('hola');
         // bucle para que estén todos los collapsibles cerrados
-        for (const collapsible of collapsibles) {
+       for (const collapsible of collapsibles) {
             collapsible.classList.add('hidden');
-        }
+        if (collapsible.classList.contains(hidden)) {
+          collapsible.classList.remove(hidden)}
+       }
+      
+        // if (event.currentTarget.classList.contains('closed')) {
+        //     event.currentTarget.nextElementSibling.classList.remove('hidden');
+        //     event.currentTarget.classList.remove('closed');
+        //     event.currentTarget.classList.add('open-arrow');
+        // 
+        // else {
+        //     event.currentTarget.nextElementSibling.classList.add('hidden');
+        //     event.currentTarget.classList.add('closed');
+        // }
         
-
-        // si está cerrado, se abre y si está abierto, se cierra
-        if (event.currentTarget.classList.contains('closed')) {
-            event.currentTarget.nextElementSibling.classList.remove('hidden');
-            event.currentTarget.classList.remove('closed');
-            event.currentTarget.classList.add('open-arrow');
-        }
-        else {
-            event.currentTarget.nextElementSibling.classList.add('hidden');
-            event.currentTarget.classList.add('closed');
-        }
-        
-    }
+    
+  
 
 
 
