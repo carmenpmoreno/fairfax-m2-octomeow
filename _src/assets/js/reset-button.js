@@ -1,14 +1,26 @@
-const resetButon = document.querySelector('.reset--button');
-const defaultcolor = document.querySelector('.default--palette');
-const inputResetEl = document.querySelectorAll('.fill-in__input');
+"use strict";
+const resetButon = document.querySelector(".reset--button");
+const defaultcolor = document.querySelector(".default--palette");
+const inputResetEl = document.querySelectorAll(".fill-in__input");
+const liPreviewEl = document.querySelectorAll(".contact__list--rrss");
+
 
 for (let i = 0; i < inputResetEl.length; i++) {
-    const everyResetInput = inputResetEl[i];
+  const everyResetInput = inputResetEl[i];
+  resetButon.addEventListener("click", function resetFormColors() {
+    inputResetEl[i].value = "";
+  });
+}
 
-    resetButon.addEventListener('click', function resetFormColors() {
-        inputResetEl[i].value = '';
-    });
-};
+for (let i = 0; i < liPreviewEl.length; i++) {
+    const everyResetInput = inputResetEl[i];
+    //liPreviewEl.src = everyliPreviewEl;
+    console.log('Href ', liPreviewEl[i].children);
+
+    console.dir(liPreviewEl[i].children);
+  }
+
+
 
 
 /*
