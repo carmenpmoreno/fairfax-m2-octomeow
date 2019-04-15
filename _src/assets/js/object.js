@@ -3,6 +3,7 @@
 console.log('Hola');
 
 let card = {
+  palette: '1',
   name: 'Nombre y apellido',
   job: 'Trabajo',
   phone: '',
@@ -10,13 +11,11 @@ let card = {
   linkedin: '',
   github: '',
   photo: '',
-  palette: '1',
 };
 
 let localStorageKey = 'cacheCard';
 const inputUpdateEls = document.querySelectorAll('.input-update');
 console.log(inputUpdateEls);
-
 
 let cacheCard = () => {
   console.log('Odio la puta caché');
