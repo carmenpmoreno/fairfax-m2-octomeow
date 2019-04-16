@@ -1,11 +1,10 @@
 /* eslint-disable no-console */
 /* eslint-disable strict */
-console.log('Hola');
 
 let card = {
-  palette: '1',
-  name: 'Nombre y apellido',
-  job: 'Trabajo',
+  palette: '',
+  name: '',
+  job: '',
   phone: '',
   email: '',
   linkedin: '',
@@ -13,24 +12,25 @@ let card = {
   photo: '',
 };
 
-let localStorageKey = 'cacheCard';
 const inputUpdateEls = document.querySelectorAll('.input-update');
-console.log(inputUpdateEls);
+
+let localStorageKey = 'cacheCard';
 
 let cacheCard = () => {
-  console.log('Odio la puta caché');
   if (localStorage.cacheCard) {
     const savedCard = JSON.parse(localStorage.getItem('cacheCard'));
-    console.log(savedCard);
-    card.name = savedCard.name;
-    card.job = savedCard.job;
-    card.phone = savedCard.phone;
-    card.email = savedCard.email;
-    card.linkedin = savedCard.linkedin;
-    card.github = savedCard.github;
-    card.photo = savedCard.photo;
-    card.palette = savedCard.palette;
-    console.log(card);
+    inputUpdateEls.forEach(function(element) {
+      // console.log(element.name);
+      // console.log(element.getAttribute('type'));
+      const currentType = element.getAttribute('type');
+      if(currentType === 'radio' && element.value === savedCard[element.name]) {
+        element.checked = true;
+        // element.click();
+        // element.nextElementSibling.change();
+      } else {
+        element.value = savedCard[element.name];
+      }  
+    });
   }
 };
 
@@ -44,8 +44,8 @@ let fillCardWithCache = () => {
 };
 
 fillCardWithCache();
-//HACER FUNCIÓN QUE DESDE SAVEDCARD RELLENE LOS INPUTS
-//EL RESET VOLVERÁ EL OBJETO AL ESTADO DE CARD INICIAL
+
+const twitterLinkEl = document.querySelector('.twitter-link');
 
 function cardUpdate(name, value) {
   card[name] = value;
@@ -65,4 +65,38 @@ function inputChangeHandler(event) {
 
 for (let i = 0; i < inputUpdateEls.length; i++) {
   inputUpdateEls[i].addEventListener('change', inputChangeHandler);
+  inputUpdateEls[i].addEventListener('click', inputChangeHandler);
 }
+
+function sendRequest(json){
+  fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
+    method: 'POST',
+    body: JSON.stringify(json),
+    headers: {
+      'content-type': 'application/json'
+    },
+  })
+    .then(function(resp) {
+      return resp.json();
+    })
+    .then(function(result) {
+      showURL(result);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+}
+
+function showURL(result){
+  if(result.success){
+    twitterLinkEl.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
+  } else {
+    twitterLinkEl.innerHTML = 'ERROR:' + result.error;
+  }
+}
+
+function formButtonClickHandler() {
+  sendRequest(JSON.parse(cacheCard));
+}
+
+formButton.addEventListener('click', formButtonClickHandler);
