@@ -36,15 +36,6 @@ let cacheCard = () => {
 
 cacheCard();
 
-let fillCardWithCache = () => {
-  console.log('card para rellenar', card);
-  for (const entry of inputUpdateEls.entries()) {
-    console.log(entry[1].value); 
-  }
-};
-
-fillCardWithCache();
-
 const twitterLinkEl = document.querySelector('.twitter-link');
 
 function cardUpdate(name, value) {
