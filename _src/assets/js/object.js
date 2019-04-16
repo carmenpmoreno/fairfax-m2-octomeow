@@ -76,8 +76,6 @@ for (let i = 0; i < inputUpdateEls.length; i++) {
 //     });
 // }
 
-<<<<<<< HEAD
-=======
 // function sendRequest(json){
 //   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
 //     method: 'POST',
@@ -97,7 +95,6 @@ for (let i = 0; i < inputUpdateEls.length; i++) {
 //     });
 // }
 
->>>>>>> 3cc81487da9c6060a525e935fe0f610733c8a00c
 // function showURL(result){
 //   if(result.success){
 //     twitterLinkEl.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
