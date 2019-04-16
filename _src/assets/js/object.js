@@ -56,38 +56,36 @@ function inputChangeHandler(event) {
 
 for (let i = 0; i < inputUpdateEls.length; i++) {
   inputUpdateEls[i].addEventListener('change', inputChangeHandler);
-  inputUpdateEls[i].addEventListener('click', inputChangeHandler);
 }
+// function sendRequest(json){
+//   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
+//     method: 'POST',
+//     body: JSON.stringify(json),
+//     headers: {
+//       'content-type': 'application/json'
+//     },
+//   })
+//     .then(function(resp) {
+//       return resp.json();
+//     })
+//     .then(function(result) {
+//       showURL(result);
+//     })
+//     .catch(function(error) {
+//       console.log(error);
+//     });
+// }
 
-function sendRequest(json){
-  fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
-    method: 'POST',
-    body: JSON.stringify(json),
-    headers: {
-      'content-type': 'application/json'
-    },
-  })
-    .then(function(resp) {
-      return resp.json();
-    })
-    .then(function(result) {
-      showURL(result);
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
-}
+// function showURL(result){
+//   if(result.success){
+//     twitterLinkEl.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
+//   } else {
+//     twitterLinkEl.innerHTML = 'ERROR:' + result.error;
+//   }
+// }
 
-function showURL(result){
-  if(result.success){
-    twitterLinkEl.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
-  } else {
-    twitterLinkEl.innerHTML = 'ERROR:' + result.error;
-  }
-}
+// function formButtonClickHandler() {
+//   sendRequest(JSON.parse(cacheCard));
+// }
 
-function formButtonClickHandler() {
-  sendRequest(JSON.parse(cacheCard));
-}
-
-formButton.addEventListener('click', formButtonClickHandler);
+// formButton.addEventListener('click', formButtonClickHandler);
