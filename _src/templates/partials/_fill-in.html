@@ -1,43 +1,44 @@
-<legend class="legend legend__distribution legend2">
+<legend class="legend closed">
     <i class="far fa-keyboard legend__icon"></i>
-    <h2 class="legend__title title__legend--grey">Rellena</h2>
-    <i class="fas fa-chevron-down legend__arrow arrow2"></i>
+    <h2 class="legend__title">Rellena</h2>
+    <i class="fas fas fa-chevron-up legend__arrow"></i>
 </legend>
 
-<div class="collapsible2">
+<div class="fill-in__items hidden collapsibles">
 
     <div class="fill-in__item">
         <label class="fill-in__label" for="full_name">Nombre completo</label>
-        <input class="fill-in__input" id="full_name" type="text" name="full_name" placeholder="Ej: Sally Jill" required/>
+        <input class="fill-in__input" id="full_name" type="text" name="full_name" placeholder="Sally Jill" required/>
     </div>
 
     <div class="fill-in__item">
         <label class="fill-in__label" for="job">Puesto</label>
-        <input class="fill-in__input" id="job" type="text" name="job" placeholder="Ej: Front-end"/>
+        <input class="fill-in__input" id="job" type="text" name="job" placeholder="Front-end"/>
     </div>
 
     <div class="fill-in__item">
         <label class="fill-in__label" for="img-profile">Imagen de perfil</label>
 
         <div class="fill-in__buttonImg-wrapper">
-            <input class="fill-in__button fill-in__buttonLabel" id="img-profile" type="button" value="Añadir imagen" name="img-profile"/>
-            <div class="img-profile__preview"></div>
+            <input class="fill-in__button fill-in__buttonLabel js__profile-trigger" id="img-profile" type="button" value="Añadir imagen" name="img-profile"/>
+            <input type="file" name="" id="img-selector" class="action__hiddenField js__profile-upload-btn">
+            <div class="img-profile__preview js__profile-preview profile__preview"></div>
         </div>
     </div>
 
     <div class="fill-in__item">
         <label class="fill-in__label" for="email">Email</label>
-        <input class="fill-in__input" id="email" type="email" name="email" placeholder="Ej: sally-jill@gmail.com"/>
+        <input class="fill-in__input" id="email" type="email" name="email" placeholder="sally-jill@gmail.com"/>
     </div>
 
     <div class="fill-in__item">
         <label class="fill-in__label" for="phone">Teléfono</label>
-        <input class="fill-in__input input__tel" id="phone" type="tel" minlength="9" name="phone" placeholder="Ej: 555-55-55-55"/>
+        <input class="fill-in__input input__tel" id="phone" type="tel" minlength="9" name="phone" placeholder="555-55-55-55"/>
     </div>
         
     <div class="fill-in__item">
         <label class="fill-in__label" class="fill-in__label" for="linkedin">Linkedin</label>
-        <input class="fill-in__input" id="linkedin" type="text" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill"/>
+        <input class="fill-in__input" id="linkedin" type="text" name="linkedin" placeholder="Ej:sally.hill"/>
     </div>
 
     <div class="fill-in__item">

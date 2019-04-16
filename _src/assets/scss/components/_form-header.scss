@@ -10,34 +10,26 @@ fieldset {
     border: none;
     padding: 0;
     margin: 0;
+    min-width: 320px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
 
-    &__distribution {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        cursor: pointer;
-
-        .legend__icon {
-            padding: 13px 0;
-            margin-right: 10px;
-            color: $color-orangeButane;
-        }
-
-        .legend__title {
-            text-align: left;
-        }
-
-        .legend__arrow {
-            padding: 13px 0;  
-            margin-left: auto;              
-            color: $color-greyMouse;
-        }
-    
+    .legend__icon {
+        padding: 13px 0;
+        margin-right: 10px;
+        color: $color-orangeButane;
     }
-}
 
-.collapsible1, .collapsible2, .collapsible3 {
-    display: none;
+    .legend__title {
+        text-align: left;
+    }
+
+    .legend__arrow {
+        padding: 13px 0;  
+        margin-left: auto;              
+        color: $color-greyMouse;
+    }
 }

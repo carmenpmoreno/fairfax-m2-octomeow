@@ -38,6 +38,11 @@
             margin-top: 6px;
             margin-left: 20px;
         }   
+        .action__hiddenField {
+            /* Ocultamos el input de tipo "file" porque no podemos 
+            darle los estilos que queremos */
+            display: none;
+          }
     }
 }
 
