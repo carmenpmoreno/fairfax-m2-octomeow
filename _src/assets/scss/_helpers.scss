@@ -2,7 +2,7 @@
     display: none;
 }
 .closed {
-    & fas fa-chevron-up {
-        
+    .legend__arrow {
+        transform: rotate(180deg);
     }
 }
