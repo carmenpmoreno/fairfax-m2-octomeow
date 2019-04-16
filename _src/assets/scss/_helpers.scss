@@ -1,0 +1,8 @@
+.hidden {
+    display: none;
+}
+.closed {
+    .legend__arrow {
+        transform: rotate(180deg);
+    }
+}
