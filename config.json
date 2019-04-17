@@ -29,7 +29,8 @@
       "_src/assets/js/img-load.js",
       "_src/assets/js/object.js",
       "_src/assets/js/fetch.js",
-      "_src/assets/js/reset-button.js"
+      "_src/assets/js/reset-button.js",
+      "_src/assets/js/twitter-link.js"
 		],
 		"dest": "public/assets/js/",
     "dist": "docs/assets/js/"
