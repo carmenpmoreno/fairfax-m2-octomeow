@@ -9,7 +9,7 @@ function loopColors() {
   for (let k = 0; k < cardPreviewElClases.length; k++) {
     if (cardPreviewEl.classList.contains(cardPreviewElClases[k])) {
       cardPreviewEl.classList.remove(cardPreviewElClases[k]);
-      cardPreviewEl.classList.add("default--palette");
+      cardPreviewEl.classList.add("palette--1");
     }
   }
 }
