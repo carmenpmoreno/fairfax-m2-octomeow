@@ -20,6 +20,11 @@
         &-img {
             width: 100%;
         }
+        &-adalab img {
+            width: 120px;
+            margin: 10px auto 0;
+            display: block;
+        }
     }
 
     @media all and (min-width: 768px) {
