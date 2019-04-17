@@ -9,7 +9,9 @@ Compartir en Twitter
 
 
 // si queremos que se añada un texto despues de ? escribimos text= para una url &url=
-const twitterText = `Esta es mi nueva tarjeta de contacto: ${document.querySelector('.twitter-link.result').innerHTML} Si quieres una de nuestras Awesome Profile Cards, visita: http://beta.adalab.es/fairfax-m2-octomeow/`;
+
+
+const twitterText = `Esta es mi nueva tarjeta de contacto: LINK Si quieres una de nuestras Awesome Profile Cards, visita: http://beta.adalab.es/fairfax-m2-octomeow/`;
 //const cardTwitterLink=;
 const linkTextTrans = encodeURIComponent(twitterText);
 const twitterLink ='https://twitter.com/intent/tweet?';
@@ -22,3 +24,24 @@ const shareLink = document.querySelector('.twitter-link');
 shareLink.href= twitterFull;
 
 console.log(shareLink);
+
+
+// const twitterSendButton = document.querySelector('.twitter-link');
+
+// function twitterButtonHandler(event) {
+// //   event.preventDefault;
+//   const finalUrlEl = document.querySelector('.twitter-link.result');
+//   console.log(finalUrl);
+//   const finalUrl = finalUrlEl.innerHTML;
+//   const twitterText = `Esta es mi nueva tarjeta de contacto: ${finalUrl} Si quieres una de nuestras Awesome Profile Cards, visita: http://beta.adalab.es/fairfax-m2-octomeow/`;
+//   //const cardTwitterLink=;
+//   const linkTextTrans = encodeURIComponent(twitterText);
+//   const twitterLink ='https://twitter.com/intent/tweet?';
+
+//   const twitterFull= `${twitterLink}`+`text=`+`${linkTextTrans}`;//+ `&url=${linkUrlTransform}`;
+
+//   console.log(twitterFull);
+
+//   const shareLink = document.querySelector('.twitter-link');
+//   shareLink.href= twitterFull;
+// }
