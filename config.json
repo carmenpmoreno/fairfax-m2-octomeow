@@ -27,7 +27,8 @@
       "_src/assets/js/preview-tel.js",
       "_src/assets/js/share.js",
       "_src/assets/js/img-load.js",
-      "_src/assets/js/object.js"   
+      "_src/assets/js/object.js",
+      "_src/assets/js/fetch.js"
 		],
 		"dest": "public/assets/js/",
     "dist": "docs/assets/js/"
