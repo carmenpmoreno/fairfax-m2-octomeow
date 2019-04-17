@@ -61,4 +61,5 @@ function inputChangeHandler(event) {
 
 for (let i = 0; i < inputUpdateEls.length; i++) {
   inputUpdateEls[i].addEventListener("change", inputChangeHandler);
+  console.log('muetsra card lleno: ', card)
 }
