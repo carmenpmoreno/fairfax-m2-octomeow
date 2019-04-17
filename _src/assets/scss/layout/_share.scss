@@ -54,11 +54,16 @@
 }
 
 .twitter-link {
-    width: 280px;
-    color: $color-orangeButane;
+    width: 100%;
     font-size: 12px;
     display: block;
     margin: auto;
+    color: $color-whiteSnow;
+}
+
+.twitter-link-result {
+    display: block;
+    color: $color-orangeButane;
 }
 
 .button-twitter {

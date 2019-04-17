@@ -40,7 +40,7 @@ let cacheCard = () => {
 
 cacheCard();
 
-const twitterLinkEl = document.querySelector(".twitter-link");
+const twitterLinkEl = document.querySelector('.title-twitter-content');
 
 function cardUpdate(name, value) {
   card[name] = value;
