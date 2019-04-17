@@ -10,20 +10,18 @@ Compartir en Twitter
 
 // si queremos que se añada un texto despues de ? escribimos text= para una url &url=
 
-function callTwitter (){
-    const twitterText = `Esta es mi nueva tarjeta de contacto. Si quieres una de nuestras Awesome Profile Cards, visita: http://beta.adalab.es/fairfax-m2-octomeow/`;
+function callTwitter (finalUrl){
+    const twitterText = `Esta es mi nueva tarjeta de contacto:`;
     //const cardTwitterLink=;
     const linkTextTrans = encodeURIComponent(twitterText);
-    const linkCard = finalUrl;
-    const linkCardTransform = encodeURIComponent(linkCard);
+    const linkCardTransform = encodeURIComponent(finalUrl);
     const twitterLink ='https://twitter.com/intent/tweet?';
     const twitterFull= `${twitterLink}`+`text=`+`${linkTextTrans}`+ `&url=`+`${linkCardTransform}`;
-    console.log(twitterFull);
     const shareLink = document.querySelector('.twitter-link');
     shareLink.href= twitterFull;
 }
 
-console.log(shareLink);
+
 
 
 // const twitterSendButton = document.querySelector('.twitter-link');
