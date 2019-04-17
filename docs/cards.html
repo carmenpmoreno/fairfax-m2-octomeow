@@ -22,9 +22,9 @@
             </section>
         </header>
         <main class="cards__container">
-            <form class="form" action="">
+            <form class="form" action="" method="POST">
                 <div class="wrapper">
-                    <fieldset class="preview">
+                    <fieldset class="form__preview">
                         <section class="preview-container">
                             <div class="button-container">
                                 <div class="reset-button">
@@ -32,7 +32,7 @@
                                     <button class="reset--button" type="button" id="reset"> <i class="far fa-trash-alt"></i>Reset</button>
                                 </div>
                                 </legend>
-                                <div class="card-preview default--palette">
+                                <div class="card-preview palette--1">
                                     <div class="card--header">
                                         <div class="sidebar bg__light"></div>
                                         <div class="main--data">
@@ -40,10 +40,7 @@
                                             <p class="occupation txt__medium"></p>
                                         </div>
                                     </div>
-                                    <div class="user--profile__pic">
-                                        <img src="assets/images/default-profile-pic.png" alt="foto de perfil"
-                                        />
-                                    </div>
+                                    <div class="user--profile__pic js__profile-image profile__image" style="background-image:url(assets/images/default-profile-pic.png)"></div>
                                     <div>
                                         <div class="contact__link">
                                             <ul class="contact__list">
@@ -74,21 +71,21 @@
                                 </div>
                         </section>
                     </fieldset>
-                    <div class="collapsible__container">
-                        <fieldset class="design">
-                            <legend class="legend legend__distribution legend1"> <i class="far fa-object-ungroup fa-lg legend__icon"></i>
+                    <div class="form__content">
+                        <fieldset class="form__design">
+                            <legend class="legend closed"> <i class="far fa-object-ungroup fa-lg legend__icon"></i>
 
-                                 <h2 class="legend__title title__legend--grey">Diseña</h2>
- <i class="fas fa-chevron-down legend__arrow arrow1"></i>
+                                 <h2 class="legend__title">Diseña</h2>
+ <i class="fas fa-chevron-up legend__arrow"></i>
 
                             </legend>
-                            <label class="collapsible1" for="colors">
-                                <p class="option__title subtitle__legend--grey">Colores</p>
+                            <label class="option__distribution hidden collapsibles" for="colors">
+                                <p class="option__title legend__subtitle">Colores</p>
                                 <div class="option__container">
                                     <label class="color__container">
                                         <div class="color-item radio__container">
-                                            <input class="radio" type="radio" id="colors" name="colors" value="green"
-                                            /> <span class="checkmark" id="p1"></span>
+                                            <input class="radio input-update" type="radio" id="colors" name="palette"
+                                            value="1" checked /> <span class="checkmark" id="p1"></span>
 
                                         </div>
                                         <div class="palette--1">
@@ -99,8 +96,8 @@
                                     </label>
                                     <label class="color__container">
                                         <div class="color-item radio__container">
-                                            <input class="radio" type="radio" id="colors" name="colors" value="green"
-                                            /> <span class="checkmark" id="p2"></span>
+                                            <input class="radio input-update" type="radio" id="colors" name="palette"
+                                            value="2" /> <span class="checkmark" id="p2"></span>
 
                                         </div>
                                         <div class="palette--2">
@@ -111,8 +108,8 @@
                                     </label>
                                     <label class="color__container">
                                         <div class="color-item radio__container">
-                                            <input class="radio" type="radio" id="colors" name="colors" value="green"
-                                            /> <span class="checkmark" id="p3"></span>
+                                            <input class="radio input-update" type="radio" id="colors" name="palette"
+                                            value="3" /> <span class="checkmark" id="p3"></span>
 
                                         </div>
                                         <div class="palette--3">
@@ -124,73 +121,82 @@
                                 </div>
                             </label>
                         </fieldset>
-                        <fieldset class="fill-in">
-                            <legend class="legend legend__distribution legend2"> <i class="far fa-keyboard legend__icon"></i>
+                        <fieldset class="form__fill-in">
+                            <legend class="legend closed"> <i class="far fa-keyboard legend__icon"></i>
 
-                                 <h2 class="legend__title title__legend--grey">Rellena</h2>
- <i class="fas fa-chevron-down legend__arrow arrow2"></i>
+                                 <h2 class="legend__title">Rellena</h2>
+ <i class="fas fas fa-chevron-up legend__arrow"></i>
 
                             </legend>
-                            <div class="collapsible2">
+                            <div class="fill-in__items hidden collapsibles">
                                 <div class="fill-in__item">
                                     <label class="fill-in__label" for="full_name">Nombre completo</label>
-                                    <input class="fill-in__input" id="full_name" type="text"
-                                    name="full_name" placeholder="Ej: Sally Jill" required/>
+                                    <input class="fill-in__input input-update" id="full_name"
+                                    type="text" name="name" placeholder="Ej: Sally Jill" required/>
                                 </div>
                                 <div class="fill-in__item">
                                     <label class="fill-in__label" for="job">Puesto</label>
-                                    <input class="fill-in__input" id="job" type="text" name="job"
-                                    placeholder="Ej: Front-end" />
+                                    <input class="fill-in__input input-update" id="job" type="text"
+                                    name="job" placeholder="Ej: Front-end" />
                                 </div>
                                 <div class="fill-in__item">
                                     <label class="fill-in__label" for="img-profile">Imagen de perfil</label>
                                     <div class="fill-in__buttonImg-wrapper">
-                                        <input class="fill-in__button fill-in__buttonLabel" id="img-profile" type="button"
-                                        value="Añadir imagen" name="img-profile" />
-                                        <div class="img-profile__preview"></div>
+                                        <input class="fill-in__button fill-in__buttonLabel js__profile-trigger"
+                                        id="img-profile" type="button" value="Añadir imagen" name="img-profile"
+                                        />
+                                        <input name="photo" type="file" id="img-selector" class="action__hiddenField js__profile-upload-btn input-update">
+                                        <div class="img-profile__preview js__profile-preview profile__preview"></div>
                                     </div>
                                 </div>
                                 <div class="fill-in__item">
                                     <label class="fill-in__label" for="email">Email</label>
-                                    <input class="fill-in__input" id="email" type="email" name="email"
-                                    placeholder="Ej: sally-jill@gmail.com" />
+                                    <input class="fill-in__input input-update" id="email" type="email"
+                                    name="email" placeholder="Ej: sally-jill@gmail.com" />
                                 </div>
                                 <div class="fill-in__item">
                                     <label class="fill-in__label" for="phone">Teléfono</label>
-                                    <input class="fill-in__input input__tel" id="phone" type="tel"
-                                    minlength="9" name="phone" placeholder="Ej: 555-55-55-55" />
+                                    <input class="fill-in__input input__tel input-update"
+                                    id="phone" type="tel" minlength="9" name="phone" placeholder="Ej: 555-55-55-55"
+                                    />
                                 </div>
                                 <div class="fill-in__item">
                                     <label class="fill-in__label" class="fill-in__label" for="linkedin">Linkedin</label>
-                                    <input class="fill-in__input" id="linkedin" type="text"
-                                    name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
+                                    <input class="fill-in__input input-update" id="linkedin"
+                                    type="text" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill"
+                                    />
                                 </div>
                                 <div class="fill-in__item">
                                     <label class="fill-in__label" for="github">Github</label>
-                                    <input class="fill-in__input" id="github" type="text" name="github"
-                                    placeholder="Ej: sally-hill" />
+                                    <input class="fill-in__input input-update" id="github" type="text"
+                                    name="github" placeholder="Ej: sally-hill" />
                                 </div>
                             </div>
                         </fieldset>
-                        <fieldset class="share">
-                            <legend class="legend legend__distribution legend3"> <i class="fas fa-share-alt legend__icon legend__icon--share"></i>
+                        <fieldset class="form__share">
+                            <legend class="legend closed"> <i class="fas fa-share-alt legend__icon legend__icon--share"></i>
 
-                                 <h2 class="legend__title title__legend--grey">Comparte</h2>
- <i class="fas fa-chevron-down legend__arrow arrow3"></i>
+                                 <h2 class="legend__title">Comparte</h2>
+ <i class="fas fa-chevron-up legend__arrow"></i>
 
                             </legend>
-                            <div class="collapsible3">
+                            <div class="share__container hidden collapsibles">
                                 <button class="share-button" type="button"> <i class="far fa-address-card"></i>
 Crear tarjeta</button>
                                 <section class="section__twitter collapsible__hidden">
                                      <h3 class="title-twitter">La tarjeta ha sido creada:</h3>
- <a class="twitter-link" href="#">https://awesome-profile-card.com?id=A456Dkhhñjkhjkbsad</a>
+ <a class="" href="#">https://awesome-profile-card.com?id=A456Dkhhñjkhjkbsad</a>
 
                                     <button
-                                    class="button-twitter"> <i class="fab fa-twitter twitter-icon"></i>
-Compartir en Twitter</button>
+                                    class="button-twitter"> <a class=twitter-link href="#" target="_top">
+            <i class="fab fa-twitter twitter-icon"></i>
+            Compartir en Twitter
+            </a>
+
+                                        </button>
                                 </section>
                             </div>
+                            <!-- en el enlace el src es lo que se pone de informacion en el twt? -->
                         </fieldset>
                     </div>
                     </div>
