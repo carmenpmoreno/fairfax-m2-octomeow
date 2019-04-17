@@ -5,7 +5,6 @@ var form = document.querySelector('form');
 
 
 function sendData () {
-  console.log('Estoy en send data');
   var inputs = Array.from(form.elements);
   var json = getJSONFromInputs(inputs);
   json.skills = ['JavaScript', 'React'];
@@ -14,7 +13,6 @@ function sendData () {
 }
 
 function loadPhoto(){
-  console.log('Estoy en load photo');
   var myFile = document.querySelector('#img-selector').files[0];
   fr.addEventListener('load', sendData);
   fr.readAsDataURL(myFile);
@@ -30,7 +28,6 @@ function getJSONFromInputs(inputs){
 
 function sendRequest(obj){
   const json = JSON.stringify(obj);
-  console.log('Enviando json', json);
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
     method: 'POST',
     body: json,
@@ -50,6 +47,4 @@ function showURL(result){
     twitterLinkEl.innerHTML = 'ERROR:' + result.error;
   }
 }
-
-console.log(formButton);
 formButton.addEventListener('click', loadPhoto);
