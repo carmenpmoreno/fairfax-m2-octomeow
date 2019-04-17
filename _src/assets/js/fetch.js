@@ -28,11 +28,12 @@ function getJSONFromInputs(inputs){
   }, {});
 }
 
-function sendRequest(json){
-  console.log('Estoy en send request');
+function sendRequest(obj){
+  const json = JSON.stringify(obj);
+  console.log('Enviando json', json);
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
     method: 'POST',
-    body: JSON.stringify(json),
+    body: json,
     headers: {
       'content-type': 'application/json'
     },
