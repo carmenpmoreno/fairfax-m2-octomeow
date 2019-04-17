@@ -4,14 +4,14 @@
 /* eslint-disable strict */
 
 let card = {
-  palette: '',
-  name: '',
-  job: '',
-  phone: '',
-  email: '',
-  linkedin: '',
-  github: '',
-  photo: '',
+  palette: "",
+  name: "",
+  job: "",
+  phone: "",
+  email: "",
+  linkedin: "",
+  github: "",
+  photo: "",
 };
 
 const inputUpdateEls = document.querySelectorAll('.input-update');
@@ -40,8 +40,7 @@ let cacheCard = () => {
 
 cacheCard();
 
-
-const twitterLinkEl = document.querySelector('.twitter-link');
+const twitterLinkEl = document.querySelector(".twitter-link");
 
 function cardUpdate(name, value) {
   card[name] = value;
@@ -61,6 +60,5 @@ function inputChangeHandler(event) {
 }
 
 for (let i = 0; i < inputUpdateEls.length; i++) {
-  inputUpdateEls[i].addEventListener('change', inputChangeHandler);
+  inputUpdateEls[i].addEventListener("change", inputChangeHandler);
 }
-
