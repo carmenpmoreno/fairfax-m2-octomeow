@@ -2,8 +2,6 @@
 /* eslint-disable strict */
 var form = document.querySelector('form');
 
-
-
 function sendData () {
   console.log('Estoy en send data');
   var inputs = Array.from(form.elements);
@@ -45,7 +43,8 @@ function sendRequest(obj){
 
 function showURL(result){
   if(result.success){
-    twitterLinkEl.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
+    twitterLinkEl.innerHTML = '<a class="twitter-link-result" href=' + result.cardURL + '>' + result.cardURL + '</a>';
+    callTwitter(result.cardURL);
   }else{
     twitterLinkEl.innerHTML = 'ERROR:' + result.error;
   }
