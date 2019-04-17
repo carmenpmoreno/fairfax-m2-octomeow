@@ -2,48 +2,57 @@
 /* eslint-disable strict */
 
 let card = {
-  palette: '',
-  name: '',
-  job: '',
-  phone: '',
-  email: '',
-  linkedin: '',
-  github: '',
-  photo: '',
+  palette: "",
+  name: "",
+  job: "",
+  phone: "",
+  email: "",
+  linkedin: "",
+  github: "",
+  photo: ""
 };
 
-const inputUpdateEls = document.querySelectorAll('.input-update');
+// let localStorageKey = 'cacheCard';
 
-let localStorageKey = 'cacheCard';
+// let cacheCard = () => {
+//   if (localStorage.cacheCard) {
+//     const savedCard = JSON.parse(localStorage.getItem('cacheCard'));
+//     inputUpdateEls.forEach(function(element) {
+//       // console.log(element.name);
+//       // console.log(element.getAttribute('type'));
+//       const currentType = element.getAttribute('type');
+//       if(currentType === 'radio' && element.value === savedCard[element.name]) {
+//         element.checked = true;
+//         // element.click();
+//         // element.nextElementSibling.change();
+//       } else {
+//         element.value = savedCard[element.name];
+//       }
+//     });
+//   }
+// };
 
-let cacheCard = () => {
-  if (localStorage.cacheCard) {
-    const savedCard = JSON.parse(localStorage.getItem('cacheCard'));
-    inputUpdateEls.forEach(function(element) {
-      // console.log(element.name);
-      // console.log(element.getAttribute('type'));
-      const currentType = element.getAttribute('type');
-      if(currentType === 'radio' && element.value === savedCard[element.name]) {
-        element.checked = true;
-        // element.click();
-        // element.nextElementSibling.change();
-      } else {
-        element.value = savedCard[element.name];
-      }  
-    });
-  }
-};
+// cacheCard();
+// function finalFormHandler() {
+//   localStorage.setItem(JSON.stringify(card));
+// }
 
-cacheCard();
+const inputUpdateEls = document.querySelectorAll(".input-update");
 
-const twitterLinkEl = document.querySelector('.twitter-link');
-
+const twitterLinkEl = document.querySelector(".twitter-link");
 function cardUpdate(name, value) {
   card[name] = value;
 }
 
-function finalFormHandler() {
-  localStorage.setItem(localStorageKey, JSON.stringify(card));
+function sendData() {
+  var inputs = Array.from(inputUpdateEls);
+  card.photo = fr.result;
+  //sendRequest(json);
+}
+function loadPhoto() {
+  let myFile = document.querySelector("#img-selector").files[0];
+  fr.addEventListener("load", sendData);
+  fr.readAsDataURL(myFile);
 }
 
 function inputChangeHandler(event) {
@@ -51,60 +60,47 @@ function inputChangeHandler(event) {
   const name = currentInput.name;
   const value = currentInput.value;
   cardUpdate(name, value);
-  finalFormHandler();
+  //finalFormHandler();
 }
 
 for (let i = 0; i < inputUpdateEls.length; i++) {
-  inputUpdateEls[i].addEventListener('change', inputChangeHandler);
+  inputUpdateEls[i].addEventListener("change", inputChangeHandler);
 }
-// function sendRequest(json){
-//   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
-//     method: 'POST',
-//     body: JSON.stringify(json),
-//     headers: {
-//       'content-type': 'application/json'
-//     },
-//   })
-//     .then(function(resp) {
-//       return resp.json();
-//     })
-//     .then(function(result) {
-//       showURL(result);
-//     })
-//     .catch(function(error) {
-//       console.log(error);
-//     });
-// }
+function sendRequest(json) {
+  fetch("https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/", {
+    method: "POST",
+    body: JSON.stringify(json),
+    headers: {
+      "content-type": "application/json"
+    }
+  })
+    .then(function(resp) {
+      if (resp.ok) {
+        return resp.json();
+      }
+      throw new Error('Algo ha ido mal');
+    })
+    .then(function(result) {
+      showURL(result);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+}
 
-// function sendRequest(json){
-//   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
-//     method: 'POST',
-//     body: JSON.stringify(json),
-//     headers: {
-//       'content-type': 'application/json'
-//     },
-//   })
-//     .then(function(resp) {
-//       return resp.json();
-//     })
-//     .then(function(result) {
-//       showURL(result);
-//     })
-//     .catch(function(error) {
-//       console.log(error);
-//     });
-// }
+function showURL(result) {
+  if (result.success) {
+    twitterLinkEl.src = result.cardURL;
+    twitterLinkEl.innerHTML = result.cardURL;
+  } else {
+    twitterLinkEl.innerHTML = "ERROR:" + result.error;
+  }
+}
 
-// function showURL(result){
-//   if(result.success){
-//     twitterLinkEl.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
-//   } else {
-//     twitterLinkEl.innerHTML = 'ERROR:' + result.error;
-//   }
-// }
+function formButtonClickHandler() {
+  sendRequest(card);
+  console.log("CARD: ", card);
+}
 
-// function formButtonClickHandler() {
-//   sendRequest(JSON.parse(cacheCard));
-// }
-
-// formButton.addEventListener('click', formButtonClickHandler);
+formButton.addEventListener("click", formButtonClickHandler);
+formButton.addEventListener("click", loadPhoto);

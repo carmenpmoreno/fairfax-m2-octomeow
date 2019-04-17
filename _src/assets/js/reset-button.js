@@ -19,14 +19,19 @@ function loopPreview() {
     jobPreview.innerHTML = defaultJob;
     liPreviewEl[j].children[0].href = backToDefault;
     iconMobEl.title = backToDefault;
+    profilePreview.style.backgroundImage = `none`;
   }
 }
 for (let i = 0; i < inputResetEl.length; i++) {
-  resetButon.addEventListener("click", function () {
+  resetButon.addEventListener("click", function() {
     inputResetEl[i].value = backToDefault;
+    profileImage.style.backgroundImage = `url(assets/images/default-profile-pic.png)`;
     //preview
     loopPreview();
     //colors
     loopColors();
   });
 }
+
+
+//FETCH
