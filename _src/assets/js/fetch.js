@@ -2,10 +2,7 @@
 /* eslint-disable strict */
 var form = document.querySelector('form');
 
-
-
 function sendData () {
-  console.log('Estoy en send data');
   var inputs = Array.from(form.elements);
   var json = getJSONFromInputs(inputs);
   json.skills = ['JavaScript', 'React'];

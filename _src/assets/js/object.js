@@ -1,6 +1,5 @@
 /* eslint-disable strict */
 
-
 let card = {
   palette: '',
   name: '',
@@ -16,12 +15,9 @@ const inputUpdateEls = document.querySelectorAll('.input-update');
 let localStorageKey = 'cacheCard';
 
 function changeColorCache(option){
-
   const selectedItemIndex = option-1;
-  //añado la clase que esté en esa misma posición
   const selectedClass = paletteClasses[selectedItemIndex];
   cardPreviewEl.classList.remove('default--palette');
-
   for(let i = 0; i<=2; i++){
     cardPreviewEl.classList.remove(`${paletteClasses[i]}`);
   }
