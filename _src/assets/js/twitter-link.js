@@ -1,5 +1,6 @@
 /* eslint-disable strict */
-function callTwitter (finalUrl) {
+
+function callTwitter (finalUrl){
   const twitterText = `Esta es mi nueva tarjeta de contacto:`;
   //const cardTwitterLink=;
   const linkTextTrans = encodeURIComponent(twitterText);
