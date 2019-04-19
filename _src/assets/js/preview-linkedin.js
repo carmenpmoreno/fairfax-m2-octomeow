@@ -5,7 +5,6 @@ const linkedinInput= document.getElementById('linkedin');
 const linkedinDefaultText='https://www.linkedin.com';
 
 function writeLinkedin(){
-    console.log('works');
     linkedinPreview.href= 'https://www.linkedin.com/in/'+linkedinInput.value || linkedinDefaultText;
 };
 

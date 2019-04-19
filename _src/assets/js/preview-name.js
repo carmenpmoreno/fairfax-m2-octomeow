@@ -6,7 +6,6 @@ const nameCardEl = document.querySelector('.full-name');
 
 
 function writeCard () {
-    console.log('Listener is working');
     const inputText = inputEl.value || inputDefaultText;
     nameCardEl.innerHTML =  inputText;
 };

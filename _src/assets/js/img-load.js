@@ -19,7 +19,7 @@ function getImage(e){
   fr.readAsDataURL(myFile);
 }
 
-
+var photo;
 /**
  * Una vez tenemos los datos listos en el FR podemos
  * trabajar con ellos ;)
@@ -30,6 +30,7 @@ function writeImage() {
    */
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
+  photo = fr.result;
 }
 
 

@@ -15,12 +15,29 @@ let card = {
 const inputUpdateEls = document.querySelectorAll('.input-update');
 let localStorageKey = 'cacheCard';
 
+function changeColorCache(option){
+
+  const selectedItemIndex = option-1;
+  //añado la clase que esté en esa misma posición
+  const selectedClass = paletteClasses[selectedItemIndex];
+  cardPreviewEl.classList.remove('default--palette');
+
+  for(let i = 0; i<=2; i++){
+    cardPreviewEl.classList.remove(`${paletteClasses[i]}`);
+  }
+  cardPreviewEl.classList.add(`${selectedClass}`);
+}
+
 function changeTextCache() {
   addMyLink();
   getJobValue();
   writeLinkedin();
   writeCard();
   insertHref();
+}
+
+function changeImgCache() {
+  card.photo = profileImage.style.backgroundImage || `url('assets/images/default-profile-pic.png')`;
 }
 
 let cacheCard = () => {
@@ -32,8 +49,11 @@ let cacheCard = () => {
       if(currentType === 'radio' && element.value === card[element.name]) {
         console.log(element.value, 'radio');
         element.checked = true;
+        changeColorCache(element.value);
       } else if (currentType === 'file') {
         console.log('file doing');
+        profileImage.style.backgroundImage = card.photo;
+        profilePreview.style.backgroundImage = card.photo;
       } else {
         element.value = card[element.name];
         changeTextCache();
@@ -44,16 +64,10 @@ let cacheCard = () => {
 
 cacheCard();
 
-function changeImgCache() {
-  card.photo = profileImage.style.backgroundImage;
-}
-
-const twitterLinkEl = document.querySelector('.twitter-link');
-
 function cardUpdate(event, name, value) {
   const currentType = event.currentTarget.getAttribute('type');
   if (currentType === 'file') {
-    setTimeout(changeImgCache(), 2000);
+    setTimeout(changeImgCache, 2000);
   } else {
     card[name] = value;
   }
