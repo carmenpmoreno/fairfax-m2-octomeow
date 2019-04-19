@@ -1,6 +1,8 @@
 /* eslint-disable no-undef */
 /* eslint-disable strict */
 var form = document.querySelector('form');
+const twitterLinkEl = document.querySelector('.title-twitter-content');
+
 
 function sendData () {
   var inputs = Array.from(form.elements);
