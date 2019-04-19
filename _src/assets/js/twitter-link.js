@@ -16,9 +16,7 @@ const twitterLink ='https://twitter.com/intent/tweet?';
 
 const twitterFull= `${twitterLink}`+`text=`+`${linkTextTrans}`;//+ `&url=${linkUrlTransform}`;
 
-console.log(twitterFull);
 
 const shareLink = document.querySelector('.twitter-link');
 shareLink.href= twitterFull;
 
-console.log(shareLink);
