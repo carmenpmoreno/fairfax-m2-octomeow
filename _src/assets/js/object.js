@@ -39,15 +39,12 @@ function changeImgCache() {
 let cacheCard = () => {
   if (localStorage.cacheCard) {
     const card = JSON.parse(localStorage.getItem('cacheCard'));
-    console.log(card);
     inputUpdateEls.forEach(function(element) {
       const currentType = element.getAttribute('type');
       if(currentType === 'radio' && element.value === card[element.name]) {
-        console.log(element.value, 'radio');
         element.checked = true;
         changeColorCache(element.value);
       } else if (currentType === 'file') {
-        console.log('file doing');
         profileImage.style.backgroundImage = card.photo;
         profilePreview.style.backgroundImage = card.photo;
       } else {
