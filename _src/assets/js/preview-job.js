@@ -5,7 +5,8 @@ const jobPreview = document.querySelector('.occupation');
 const defaultJob = "Profesión";
 jobPreview.innerHTML = defaultJob;
 
-function getJobValue(){
+
+const getJobValue = () => {
   if (jobEl.value){
     jobPreview.innerHTML = jobEl.value;
   }else{
