@@ -2,7 +2,6 @@
 
 function callTwitter (finalUrl){
   const twitterText = `Esta es mi nueva tarjeta de contacto:`;
-  //const cardTwitterLink=;
   const linkTextTrans = encodeURIComponent(twitterText);
   const linkCardTransform = encodeURIComponent(finalUrl);
   const twitterLink ='https://twitter.com/intent/tweet?';
