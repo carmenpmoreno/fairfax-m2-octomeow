@@ -1,6 +1,6 @@
 /* eslint-disable strict */
 const fr = new FileReader();
-// parece que parte una clase madre? usa new
+
 const uploadBtn = document.querySelector('.js__profile-trigger');
 const fileField = document.querySelector('.js__profile-upload-btn');
 const profileImage = document.querySelector('.js__profile-image');
