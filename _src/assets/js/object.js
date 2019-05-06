@@ -1,4 +1,3 @@
-/* eslint-disable strict */
 
 let card = {
   palette: '',
@@ -8,14 +7,14 @@ let card = {
   email: '',
   linkedin: '',
   github: '',
-  photo: '',
+  photo: ''
 };
 
 const inputUpdateEls = document.querySelectorAll('.input-update');
 let localStorageKey = 'cacheCard';
 
 function changeColorCache(option){
-  const selectedItemIndex = option-1;
+  const selectedItemIndex = option-1; 
   const selectedClass = paletteClasses[selectedItemIndex];
   cardPreviewEl.classList.remove('default--palette');
   for(let i = 0; i<=2; i++){
@@ -24,7 +23,7 @@ function changeColorCache(option){
   cardPreviewEl.classList.add(`${selectedClass}`);
 }
 
-function changeTextCache() {
+const changeTextCache=()=>{
   addMyLink();
   getJobValue();
   writeLinkedin();
@@ -32,9 +31,11 @@ function changeTextCache() {
   insertHref();
 }
 
-function changeImgCache() {
+const changeImgCache= ()=>{
   card.photo = profileImage.style.backgroundImage || `url('assets/images/default-profile-pic.png')`;
 }
+
+console.log(card);
 
 let cacheCard = () => {
   if (localStorage.cacheCard) {
